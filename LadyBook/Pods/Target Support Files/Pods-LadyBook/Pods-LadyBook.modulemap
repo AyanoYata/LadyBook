@@ -1,0 +1,6 @@
+framework module Pods_LadyBook {
+  umbrella header "Pods-LadyBook-umbrella.h"
+
+  export *
+  module * { export * }
+}
