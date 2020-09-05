@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7AD2355F283F3573EA83FD71 /* Pods_LadyBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC727932C9E50590733BE79 /* Pods_LadyBook.framework */; };
+		CE07A3BF250362830046D7A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE07A3BE250362830046D7A5 /* Default-568h@2x.png */; };
+		CE07A3C325036B5D0046D7A5 /* UIViewconstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A3C225036B5D0046D7A5 /* UIViewconstraints.swift */; };
 		CE2230AC24FC6E7B00AFE3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230AB24FC6E7B00AFE3C7 /* AppDelegate.swift */; };
 		CE2230AE24FC6E7B00AFE3C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230AD24FC6E7B00AFE3C7 /* SceneDelegate.swift */; };
 		CE2230B024FC6E7B00AFE3C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230AF24FC6E7B00AFE3C7 /* ViewController.swift */; };
@@ -17,12 +19,13 @@
 		CE2230C524FD280700AFE3C7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */; };
 		CE2230C624FD280700AFE3C7 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */; };
 		CEE449E62503275A009C572E /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE449E52503275A009C572E /* StoryboardViewController.swift */; };
-		CEE449EA25032EFD009C572E /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE449E925032EFD009C572E /* PagingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EC7E61A63F8244554CAEF0B /* Pods-LadyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.debug.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC727932C9E50590733BE79 /* Pods_LadyBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LadyBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE07A3BE250362830046D7A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE07A3C225036B5D0046D7A5 /* UIViewconstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewconstraints.swift; sourceTree = "<group>"; };
 		CE2230A824FC6E7B00AFE3C7 /* LadyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2230AB24FC6E7B00AFE3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2230AD24FC6E7B00AFE3C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,6 @@
 		CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		CE457FD1E32B289BAE5DB8EF /* Pods-LadyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.release.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.release.xcconfig"; sourceTree = "<group>"; };
 		CEE449E52503275A009C572E /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
-		CEE449E925032EFD009C572E /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +69,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE07A3C4250373510046D7A5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE07A3C225036B5D0046D7A5 /* UIViewconstraints.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		CE22309F24FC6E7B00AFE3C7 = {
 			isa = PBXGroup;
 			children = (
+				CE07A3BE250362830046D7A5 /* Default-568h@2x.png */,
 				CE2230AA24FC6E7B00AFE3C7 /* LadyBook */,
 				CE2230A924FC6E7B00AFE3C7 /* Products */,
 				6F7438B85F7E63C254113955 /* Pods */,
@@ -94,6 +105,7 @@
 				CE2230C024FC6ECF00AFE3C7 /* View */,
 				CE2230C124FC6ED800AFE3C7 /* Controller */,
 				CE2230C224FC6F1C00AFE3C7 /* Accessory */,
+				CE07A3C4250373510046D7A5 /* Extension */,
 			);
 			path = LadyBook;
 			sourceTree = "<group>";
@@ -121,7 +133,6 @@
 			children = (
 				CE2230AF24FC6E7B00AFE3C7 /* ViewController.swift */,
 				CEE449E52503275A009C572E /* StoryboardViewController.swift */,
-				CEE449E925032EFD009C572E /* PagingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,7 +157,7 @@
 				CE2230A424FC6E7B00AFE3C7 /* Sources */,
 				CE2230A524FC6E7B00AFE3C7 /* Frameworks */,
 				CE2230A624FC6E7B00AFE3C7 /* Resources */,
-				91725A524C4A210E55B8F33E /* [CP] Embed Pods Frameworks */,
+				DA0280621027A0DC55B78005 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +209,7 @@
 				CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */,
 				CE2230B524FC6E7D00AFE3C7 /* Assets.xcassets in Resources */,
 				CE2230C624FD280700AFE3C7 /* HomeTableViewCell.xib in Resources */,
+				CE07A3BF250362830046D7A5 /* Default-568h@2x.png in Resources */,
 				CE2230B324FC6E7B00AFE3C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +239,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91725A524C4A210E55B8F33E /* [CP] Embed Pods Frameworks */ = {
+		DA0280621027A0DC55B78005 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,8 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEE449EA25032EFD009C572E /* PagingViewController.swift in Sources */,
 				CEE449E62503275A009C572E /* StoryboardViewController.swift in Sources */,
+				CE07A3C325036B5D0046D7A5 /* UIViewconstraints.swift in Sources */,
 				CE2230B024FC6E7B00AFE3C7 /* ViewController.swift in Sources */,
 				CE2230AC24FC6E7B00AFE3C7 /* AppDelegate.swift in Sources */,
 				CE2230C524FD280700AFE3C7 /* HomeTableViewCell.swift in Sources */,
@@ -378,6 +390,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -402,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LadyBook/LadyBook0831/Accessory/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LadyBook/Accessory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LadyBook/LadyBook0831/Accessory/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LadyBook/Accessory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
