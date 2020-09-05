@@ -16,6 +16,8 @@
 		CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B624FC6E7D00AFE3C7 /* LaunchScreen.storyboard */; };
 		CE2230C524FD280700AFE3C7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */; };
 		CE2230C624FD280700AFE3C7 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */; };
+		CEE449E62503275A009C572E /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE449E52503275A009C572E /* StoryboardViewController.swift */; };
+		CEE449EA25032EFD009C572E /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE449E925032EFD009C572E /* PagingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		CE457FD1E32B289BAE5DB8EF /* Pods-LadyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.release.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.release.xcconfig"; sourceTree = "<group>"; };
+		CEE449E52503275A009C572E /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
+		CEE449E925032EFD009C572E /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				CE2230AF24FC6E7B00AFE3C7 /* ViewController.swift */,
+				CEE449E52503275A009C572E /* StoryboardViewController.swift */,
+				CEE449E925032EFD009C572E /* PagingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE449EA25032EFD009C572E /* PagingViewController.swift in Sources */,
+				CEE449E62503275A009C572E /* StoryboardViewController.swift in Sources */,
 				CE2230B024FC6E7B00AFE3C7 /* ViewController.swift in Sources */,
 				CE2230AC24FC6E7B00AFE3C7 /* AppDelegate.swift in Sources */,
 				CE2230C524FD280700AFE3C7 /* HomeTableViewCell.swift in Sources */,
