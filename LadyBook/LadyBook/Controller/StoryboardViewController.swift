@@ -10,11 +10,11 @@ class StoryboardViewController: UIViewController {
                  
                  let firstViewController = storyboard.instantiateViewController(withIdentifier: "FirstViewController")
                  let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+                 let thirdViewController = storyboard.instantiateViewController(withIdentifier: "ThirdViewController")
                  
                  
                  let pagingViewController = PagingViewController(viewControllers: [
-                   firstViewController,
-                   secondViewController
+                   firstViewController,secondViewController,thirdViewController
                  ])
               
                  addChild(pagingViewController)
@@ -23,8 +23,5 @@ class StoryboardViewController: UIViewController {
                   pagingViewController.didMove(toParent: self)
           
     }
-    
-
-    
 }
 
