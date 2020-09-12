@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7AD2355F283F3573EA83FD71 /* Pods_LadyBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC727932C9E50590733BE79 /* Pods_LadyBook.framework */; };
-		CE07A3BF250362830046D7A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE07A3BE250362830046D7A5 /* Default-568h@2x.png */; };
 		CE07A3C325036B5D0046D7A5 /* UIViewconstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A3C225036B5D0046D7A5 /* UIViewconstraints.swift */; };
 		CE2230AC24FC6E7B00AFE3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230AB24FC6E7B00AFE3C7 /* AppDelegate.swift */; };
 		CE2230AE24FC6E7B00AFE3C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230AD24FC6E7B00AFE3C7 /* SceneDelegate.swift */; };
@@ -18,13 +17,13 @@
 		CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B624FC6E7D00AFE3C7 /* LaunchScreen.storyboard */; };
 		CE2230C524FD280700AFE3C7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */; };
 		CE2230C624FD280700AFE3C7 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */; };
+		CE2CEA1725085AE0003B7D98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */; };
 		CEE449E62503275A009C572E /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE449E52503275A009C572E /* StoryboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EC7E61A63F8244554CAEF0B /* Pods-LadyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.debug.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC727932C9E50590733BE79 /* Pods_LadyBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LadyBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE07A3BE250362830046D7A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE07A3C225036B5D0046D7A5 /* UIViewconstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewconstraints.swift; sourceTree = "<group>"; };
 		CE2230A824FC6E7B00AFE3C7 /* LadyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LadyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2230AB24FC6E7B00AFE3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		CE2230B924FC6E7D00AFE3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE457FD1E32B289BAE5DB8EF /* Pods-LadyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.release.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.release.xcconfig"; sourceTree = "<group>"; };
 		CEE449E52503275A009C572E /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +80,6 @@
 		CE22309F24FC6E7B00AFE3C7 = {
 			isa = PBXGroup;
 			children = (
-				CE07A3BE250362830046D7A5 /* Default-568h@2x.png */,
 				CE2230AA24FC6E7B00AFE3C7 /* LadyBook */,
 				CE2230A924FC6E7B00AFE3C7 /* Products */,
 				6F7438B85F7E63C254113955 /* Pods */,
@@ -142,6 +141,7 @@
 			children = (
 				CE2230B624FC6E7D00AFE3C7 /* LaunchScreen.storyboard */,
 				CE2230B924FC6E7D00AFE3C7 /* Info.plist */,
+				CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -209,8 +209,8 @@
 				CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */,
 				CE2230B524FC6E7D00AFE3C7 /* Assets.xcassets in Resources */,
 				CE2230C624FD280700AFE3C7 /* HomeTableViewCell.xib in Resources */,
-				CE07A3BF250362830046D7A5 /* Default-568h@2x.png in Resources */,
 				CE2230B324FC6E7B00AFE3C7 /* Main.storyboard in Resources */,
+				CE2CEA1725085AE0003B7D98 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

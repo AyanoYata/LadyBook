@@ -11,6 +11,7 @@ class StoryboardViewController: UIViewController {
                  let firstViewController = storyboard.instantiateViewController(withIdentifier: "FirstViewController")
                  let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
                  let thirdViewController = storyboard.instantiateViewController(withIdentifier: "ThirdViewController")
+                 let forthViewController = storyboard.instantiateViewController(withIdentifier: "ForthViewController")
                  
                  
                  let pagingViewController = PagingViewController(viewControllers: [
