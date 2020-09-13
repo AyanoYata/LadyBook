@@ -1,8 +1,9 @@
 import UIKit
 import Parchment
 
-class StoryboardViewController: UIViewController {
 
+class StoryboardViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -15,7 +16,7 @@ class StoryboardViewController: UIViewController {
                  
                  
                  let pagingViewController = PagingViewController(viewControllers: [
-                   firstViewController,secondViewController,thirdViewController
+                   firstViewController,secondViewController,thirdViewController,forthViewController
                  ])
               
                  addChild(pagingViewController)

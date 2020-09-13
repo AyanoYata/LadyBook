@@ -15,9 +15,12 @@
 		CE2230B324FC6E7B00AFE3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B124FC6E7B00AFE3C7 /* Main.storyboard */; };
 		CE2230B524FC6E7D00AFE3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */; };
 		CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B624FC6E7D00AFE3C7 /* LaunchScreen.storyboard */; };
-		CE2230C524FD280700AFE3C7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */; };
-		CE2230C624FD280700AFE3C7 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */; };
+		CE2230C524FD280700AFE3C7 /* CustomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230C324FD280700AFE3C7 /* CustomeCell.swift */; };
+		CE2230C624FD280700AFE3C7 /* CustomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* CustomeCell.xib */; };
 		CE2CEA1725085AE0003B7D98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */; };
+		CE4D39A3250CAD4200FA6536 /* FirstListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D39A1250CAD4200FA6536 /* FirstListViewController.swift */; };
+		CE4D39A4250CAD4200FA6536 /* ArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4D39A2250CAD4200FA6536 /* ArticleListViewController.xib */; };
+		CE8ADEA6250C9C1600A4159E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ADEA5250C9C1600A4159E /* Article.swift */; };
 		CEE449E62503275A009C572E /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE449E52503275A009C572E /* StoryboardViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +36,13 @@
 		CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2230B724FC6E7D00AFE3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2230B924FC6E7D00AFE3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		CE2230C324FD280700AFE3C7 /* CustomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeCell.swift; sourceTree = "<group>"; };
+		CE2230C424FD280700AFE3C7 /* CustomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomeCell.xib; sourceTree = "<group>"; };
 		CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE457FD1E32B289BAE5DB8EF /* Pods-LadyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.release.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.release.xcconfig"; sourceTree = "<group>"; };
+		CE4D39A1250CAD4200FA6536 /* FirstListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstListViewController.swift; sourceTree = "<group>"; };
+		CE4D39A2250CAD4200FA6536 /* ArticleListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleListViewController.xib; sourceTree = "<group>"; };
+		CE8ADEA5250C9C1600A4159E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		CEE449E52503275A009C572E /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,7 @@
 		CE2230BF24FC6EC700AFE3C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE8ADEA5250C9C1600A4159E /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,8 +128,8 @@
 			children = (
 				CE2230B124FC6E7B00AFE3C7 /* Main.storyboard */,
 				CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */,
-				CE2230C324FD280700AFE3C7 /* HomeTableViewCell.swift */,
-				CE2230C424FD280700AFE3C7 /* HomeTableViewCell.xib */,
+				CE2230C324FD280700AFE3C7 /* CustomeCell.swift */,
+				CE2230C424FD280700AFE3C7 /* CustomeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +139,8 @@
 			children = (
 				CE2230AF24FC6E7B00AFE3C7 /* ViewController.swift */,
 				CEE449E52503275A009C572E /* StoryboardViewController.swift */,
+				CE4D39A1250CAD4200FA6536 /* FirstListViewController.swift */,
+				CE4D39A2250CAD4200FA6536 /* ArticleListViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,9 +215,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4D39A4250CAD4200FA6536 /* ArticleListViewController.xib in Resources */,
 				CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */,
 				CE2230B524FC6E7D00AFE3C7 /* Assets.xcassets in Resources */,
-				CE2230C624FD280700AFE3C7 /* HomeTableViewCell.xib in Resources */,
+				CE2230C624FD280700AFE3C7 /* CustomeCell.xib in Resources */,
 				CE2230B324FC6E7B00AFE3C7 /* Main.storyboard in Resources */,
 				CE2CEA1725085AE0003B7D98 /* GoogleService-Info.plist in Resources */,
 			);
@@ -263,11 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8ADEA6250C9C1600A4159E /* Article.swift in Sources */,
 				CEE449E62503275A009C572E /* StoryboardViewController.swift in Sources */,
+				CE4D39A3250CAD4200FA6536 /* FirstListViewController.swift in Sources */,
 				CE07A3C325036B5D0046D7A5 /* UIViewconstraints.swift in Sources */,
 				CE2230B024FC6E7B00AFE3C7 /* ViewController.swift in Sources */,
 				CE2230AC24FC6E7B00AFE3C7 /* AppDelegate.swift in Sources */,
-				CE2230C524FD280700AFE3C7 /* HomeTableViewCell.swift in Sources */,
+				CE2230C524FD280700AFE3C7 /* CustomeCell.swift in Sources */,
 				CE2230AE24FC6E7B00AFE3C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

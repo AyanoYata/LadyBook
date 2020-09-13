@@ -238,6 +238,9 @@
                         <color key="backgroundColor" red="0.90379470589999999" green="0.75492852929999998" blue="0.75446468590000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qne-oR-3Gp"/>
                     </view>
+                    <connections>
+                        <outlet property="firstTableView" destination="IWC-Zf-FvH" id="ici-8g-FsF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyj-9X-F16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
