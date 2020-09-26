@@ -101,6 +101,20 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
             }
         }
     }
+    //公開ボタンを押したときの処理
+    @IBAction func tapReleaseButton(_ sender: Any) {
+        guard titleTextField.text != nil else {
+            print("公開ボタンを押しました")
+            return
+        }
+        HUD.flash(.success, delay: 0.3)
+        // 前の画面に戻る
+        navigationController?.popViewController(animated: true)
+        //Firestoreに保存する処理の完成
+        self.saveToFirestore()
+        //self.uploadToCloudStorage()
+    }
+    
     //Pickerの列の数（縦）
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -116,20 +130,6 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         categoryLabel.text = categoryList[row]
-    }
-    
-    //公開ボタンを押したときの処理
-    @IBAction func tapReleaseButton(_ sender: Any) {
-        guard titleTextField.text != nil else {
-            print("公開ボタンを押しました")
-            return
-        }
-        HUD.flash(.success, delay: 0.3)
-        // 前の画面に戻る
-        navigationController?.popViewController(animated: true)
-        //Firestoreに保存する処理の完成
-        self.saveToFirestore()
-        //self.uploadToCloudStorage()
     }
     
     #warning("AritocleViewControllerへの遷移")

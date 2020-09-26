@@ -13,34 +13,19 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
     
     @IBOutlet weak var nextButton: UIButton!
     
+    #warning(" ↓ ImageViewとのOutlet接続 ")
     @IBOutlet weak var writingImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var articleTextView: UITextView!
-    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
-    // カメラとアルバムの画面を生成する
-    func presentPicker(sourceType:UIImagePickerController.SourceType) {
-        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
-            // UIImagePickerControllerのソースタイプが利用できるとき
-            let picker = UIImagePickerController()
-            picker.sourceType = sourceType
-            // デリゲート先はこのclassを指定
-            picker.delegate = self
-            //画面を表示する
-            present(picker, animated: true, completion: nil)
-        } else {
-            //利用できるソースタイプが無いときはエラー表示
-            print("The SourceType is not found")
-        }
-    }
-    
     //ImageViewをタップしたときのアクション
+    #warning(" ↓ tapImageViewとのAction接続 ")
     @IBAction func tapImageView(_ sender: Any) {
         print("imageView をタップした")
         // アクションシートを表示
@@ -66,7 +51,21 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
         present(alertSheet, animated: true)
     }
     
-    
+    // カメラとアルバムの画面を生成する
+    func presentPicker(sourceType:UIImagePickerController.SourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            // UIImagePickerControllerのソースタイプが利用できるとき
+            let picker = UIImagePickerController()
+            picker.sourceType = sourceType
+            // デリゲート先はこのclassを指定
+            picker.delegate = self
+            //画面を表示する
+            present(picker, animated: true, completion: nil)
+        } else {
+            //利用できるソースタイプが無いときはエラー表示
+            print("The SourceType is not found")
+        }
+    }
     
     //撮影 or アルバム を選択したときの処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
