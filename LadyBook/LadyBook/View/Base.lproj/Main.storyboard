@@ -323,7 +323,7 @@
         <!--Writing Add View Controller-->
         <scene sceneID="nJZ-us-VJX">
             <objects>
-                <viewController storyboardIdentifier="WrittingAdd" modalPresentationStyle="fullScreen" id="1Qe-3s-Du2" customClass="WritingAddViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WritingAddViewController" modalPresentationStyle="fullScreen" id="1Qe-3s-Du2" customClass="WritingAddViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5f-1G-ofj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,10 +408,10 @@
             </objects>
             <point key="canvasLocation" x="980" y="103"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigetion Controller-->
         <scene sceneID="FY9-LW-7Wb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="c45-O6-Lzz" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigetionController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="c45-O6-Lzz" customClass="NavigetionController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="JDb-0M-EFB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S4l-bw-Cuc">

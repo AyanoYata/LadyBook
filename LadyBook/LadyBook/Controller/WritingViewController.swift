@@ -85,31 +85,19 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
    
     //NextButtonをタップ → WritingAddページに imageView,title,Storyの値を渡す
     @IBAction func tapNextButton(_ sender: Any) {
-        performSegue(withIdentifier: "WritingAdd", sender: nil)
-}
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
-            // ②Segueの識別子確認
-            if segue.identifier == "WritingAdd" {
-                // ③遷移先ViewCntrollerの取得
-                let nc = segue.destination as! UINavigationController
-                let nextView = nc.topViewController as! WritingAddViewController
-                // ④値の設定
-                nextView.titleTextField = titleTextField
-                nextView.articleTextView = articleTextView
-                nextView.writingImageView = writingImageView
-            }
-        }
+       
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WritingAddViewController") as! WritingAddViewController
+        nextVC.titleTextField = titleTextField
+        nextVC.articleTextView = articleTextView
+        nextVC.writingImageView = writingImageView
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
 }
 
-/*// Segueの実行
- if (segue.identifier == "WritingAdd") {
-             let NextVC: WritingAddViewController = segue.destination as! WritingAddViewController
-             
-             //UIImage型の画像を入れる
-             subVC.passImage = saveImage
-
- performSegue(withIdentifier: "WrittingAdd", sender: nil)
- self.titleTextField = titleTextField
- self.articleTextView = articleTextView
-}*/
+/*let storyboard: UIStoryboard = self.storyboard!
+ let nc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "WritingAdd") as! UINavigationController
+ let nextView = nc.topViewController as! WritingAddViewController
+ nextView.titleTextField = titleTextField
+ nextView.articleTextView = articleTextView
+ nextView.writingImageView = writingImageView
+ }*/
