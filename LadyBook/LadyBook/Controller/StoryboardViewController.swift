@@ -3,6 +3,12 @@ import Parchment
 
 
 class StoryboardViewController: UIViewController {
+   
+    
+    
+    //@IBOutlet weak var writtingButton: UIButton!
+    
+    var articles: [Article] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +31,12 @@ class StoryboardViewController: UIViewController {
                   pagingViewController.didMove(toParent: self)
           
     }
-}
+    
+   
+        
+    }
+    
+    
+    
+
 

@@ -7,6 +7,7 @@ target 'LadyBook' do
 
 # Pods for LadyBook0831
     pod 'Parchment'
+    pod 'PKHUD'
     pod 'Firebase/Analytics'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
