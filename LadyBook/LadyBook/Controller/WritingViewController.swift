@@ -93,10 +93,3 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
     }
 }
 
-/*let storyboard: UIStoryboard = self.storyboard!
- let nc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "WritingAdd") as! UINavigationController
- let nextView = nc.topViewController as! WritingAddViewController
- nextView.titleTextField = titleTextField
- nextView.articleTextView = articleTextView
- nextView.writingImageView = writingImageView
- }*/
