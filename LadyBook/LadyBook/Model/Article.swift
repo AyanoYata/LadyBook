@@ -1,8 +1,6 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-import FirebaseStorage
-import FirebaseUI
 
 //記事に持たせる機能class
 class Article: Codable {
@@ -25,7 +23,7 @@ class Article: Codable {
         self.title = title
         self.text = text
         //self.category = category
-       // self.style = style
+        //self.style = style
         self.createdAt = createdAt
     }
 }

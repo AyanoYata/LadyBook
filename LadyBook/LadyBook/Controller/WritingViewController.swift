@@ -1,15 +1,15 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-//import FirebaseStorage
-//import FirebaseUI
+import FirebaseStorage
+import FirebaseUI
 
 class WritingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     
     var articles: [Article] = []
     let db = Firestore.firestore()
-    //let storage = Storage.storage()
+    let storage = Storage.storage()
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -26,7 +26,7 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
     }
     //ImageViewをタップしたときのアクション
     #warning(" ↓ tapImageViewとのAction接続 ")
-    @IBAction func tapImageView(_ sender: Any) {
+    @IBAction func tapImageView(_ sender: UITapGestureRecognizer) {
         print("imageView をタップした")
         // アクションシートを表示
         let alertSheet = UIAlertController(title: nil, message: "選択してください", preferredStyle: .actionSheet)
@@ -51,37 +51,35 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
         present(alertSheet, animated: true)
     }
     
-    // カメラとアルバムの画面を生成する
-    func presentPicker(sourceType:UIImagePickerController.SourceType) {
-        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
-            // UIImagePickerControllerのソースタイプが利用できるとき
-            let picker = UIImagePickerController()
-            picker.sourceType = sourceType
-            // デリゲート先はこのclassを指定
-            picker.delegate = self
-            //画面を表示する
-            present(picker, animated: true, completion: nil)
-        } else {
-            //利用できるソースタイプが無いときはエラー表示
-            print("The SourceType is not found")
+        // カメラとアルバムの画面を生成する
+        func presentPicker(sourceType:UIImagePickerController.SourceType) {
+            if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+                // UIImagePickerControllerのソースタイプが利用できるとき
+                let picker = UIImagePickerController()
+                picker.sourceType = sourceType
+                // デリゲート先はこのclassを指定
+                picker.delegate = self
+                //画面を表示する
+                present(picker, animated: true, completion: nil)
+            } else {
+                //利用できるソースタイプが無いときはエラー表示
+                print("The SourceType is not found")
+            }
         }
-    }
-    
-    //撮影 or アルバム を選択したときの処理
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print("撮影もしくは画像を選択しました")
         
-        if let pickedImage = info[.originalImage] as? UIImage{
-            //撮影 or 選択した画像をwritingImageViewの中身に入れる
-            writingImageView.image = pickedImage
-            writingImageView.contentMode = .scaleAspectFit
+        //撮影 or アルバム を選択したときの処理
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            print("撮影もしくは画像を選択しました")
+            
+            if let pickedImage = info[.originalImage] as? UIImage{
+                //撮影 or 選択した画像をwritingImageViewの中身に入れる
+                writingImageView.image = pickedImage
+                writingImageView.contentMode = .scaleAspectFit
+            }
+            //表示した画面を閉じる
+            picker.dismiss(animated: true, completion: nil)
         }
-        //表示した画面を閉じる
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    
-   
+       
     //NextButtonをタップ → WritingAddページに imageView,title,Storyの値を渡す
     @IBAction func tapNextButton(_ sender: Any) {
        
@@ -91,5 +89,34 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
         nextVC.writingImageView = writingImageView
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
+
+}
+ 
+
+/*/ 画像を選択するときの画面を表示
+ let pickerController = UIImagePickerController()
+ // photoLibraryから画像を選択
+ pickerController.sourceType = .photoLibrary
+ 
+ pickerController.delegate = self
+ 
+ present(pickerController, animated: true, completion: nil)
 }
 
+// 画像を選択したときの処理
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+ guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
+ else { fatalError("") }
+ writingImageView.image = selectedImage
+ dismiss(animated: true, completion: nil)
+ }
+
+// キャンセルしたときの処理
+func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+ dismiss(animated: true, completion: nil)
+}
+
+
+
+
+*/
