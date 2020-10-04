@@ -1,19 +1,20 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-import FirebaseStorage
-import FirebaseUI
+//import FirebaseStorage
+//import FirebaseUI
 
-class WritingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+
     
     var articles: [Article] = []
     let db = Firestore.firestore()
-    let storage = Storage.storage()
+    //let storage = Storage.storage()
     
     @IBOutlet weak var nextButton: UIButton!
     
-    #warning(" ↓ ImageViewとのOutlet接続 ")
+
     @IBOutlet weak var writingImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var articleTextView: UITextView!
@@ -23,9 +24,15 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        writingImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapImageView(_:))))
+        
+        self.titleTextField.delegate = self
+        self.articleTextView.delegate = self
+        
     }
+    
+    
     //ImageViewをタップしたときのアクション
-    #warning(" ↓ tapImageViewとのAction接続 ")
     @IBAction func tapImageView(_ sender: UITapGestureRecognizer) {
         print("imageView をタップした")
         // アクションシートを表示
@@ -80,43 +87,41 @@ class WritingViewController: UIViewController, UINavigationControllerDelegate, U
             picker.dismiss(animated: true, completion: nil)
         }
        
-    //NextButtonをタップ → WritingAddページに imageView,title,Storyの値を渡す
+    // TitleのKeyboardを閉じる
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+            return false
+        }
+    
+    
+    #warning("TextView入力後、リターンキーでkeyboardを閉じるコード")
+    // StoryのKeyboardを閉じる
+    func articleTextViewShouldReturn(_ textView: UITextView) -> Bool {
+            //textView.resignFirstResponder()
+            //articleTextView.text = textView.text
+        //titleTextField.text = textField.text
+    self.view.endEditing(true)
+            return false
+        }
+
+    
+    
     @IBAction func tapNextButton(_ sender: Any) {
        
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WritingAddViewController") as! WritingAddViewController
-        nextVC.titleTextField = titleTextField
-        nextVC.articleTextView = articleTextView
-        nextVC.writingImageView = writingImageView
-        self.navigationController?.pushViewController(nextVC, animated: true)
     }
-
+    //NextButtonをタップし、次のページに遷移した際 imageView,title,Storyの値を渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navigationController = segue.destination as? UINavigationController,
+           let writingAddViewController = navigationController.viewControllers.first as? WritingAddViewController {
+            writingAddViewController.titleTextField = titleTextField
+            writingAddViewController.articleTextView = articleTextView
+            writingAddViewController.writingImageView = writingImageView
+        }
+    }
+    
+    
+    
+    
 }
  
 
-/*/ 画像を選択するときの画面を表示
- let pickerController = UIImagePickerController()
- // photoLibraryから画像を選択
- pickerController.sourceType = .photoLibrary
- 
- pickerController.delegate = self
- 
- present(pickerController, animated: true, completion: nil)
-}
-
-// 画像を選択したときの処理
-func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
- guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
- else { fatalError("") }
- writingImageView.image = selectedImage
- dismiss(animated: true, completion: nil)
- }
-
-// キャンセルしたときの処理
-func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
- dismiss(animated: true, completion: nil)
-}
-
-
-
-
-*/

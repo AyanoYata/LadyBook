@@ -5,8 +5,6 @@ target 'LadyBook' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-# Pods for LadyBook0831
-    pod 'Parchment'
     pod 'PKHUD'
     pod 'Firebase/Analytics'
     pod 'Firebase/Core'
@@ -15,7 +13,7 @@ target 'LadyBook' do
     pod 'FirebaseFirestoreSwift'
     pod 'Firebase/Storage'
     pod 'FirebaseUI/Storage'
-
+    pod 'XLPagerTabStrip'
 
 
 end

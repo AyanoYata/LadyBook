@@ -1,32 +1,44 @@
 import UIKit
+import XLPagerTabStrip
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
     
-    
-    @IBOutlet weak var writtingButton: UIButton!
     
   
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var firstTableView: UITableView!
     
     
     //article情報の一覧。ここに全ての情報を保持
     var articles: [Article] = []
+    var postDatas: [PostData] = []
     //FirestoreのDBのインスタンスを作成
     let db = Firestore.firestore()
+    
+    // 上タブのタイトルボタン
+    var itemInfo: IndicatorInfo = "Top"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
-      //CustomeCellの登録
-      let nib = UINib(nibName: "CustomCell", bundle: nil)
-      tableView.register(nib, forCellReuseIdentifier: "CustomCell")
+        firstTableView.delegate = self
+        firstTableView.dataSource = self
+        //CustomeCellの登録
+        let nib = UINib(nibName: "CustomCell", bundle: nil)
+        firstTableView.register(nib, forCellReuseIdentifier: "CustomCell")
       
     }
+    
+    
+
+    //XLPagerTabStripに必須
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
+    }
+    
     
     //画面描画の都度、tableViewを更新処理
     override func viewWillAppear(_ animated: Bool) {
@@ -34,14 +46,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print("viewWillAppearが呼ばれた")
         
         dump(articles)
+        dump(postDatas)
         }
     
-
+    
     //tableViewのrowの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
+        //return postDatas.count
     }
     
+    #warning("postDatasの内容はどう返せばいいのか")
     //tableViewのCellに表示する内容を返す(indexPathの個数だけ呼ばれる)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Customcell", for: indexPath) as! CustomCell
@@ -51,17 +66,25 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     return cell
     }
     
-    #warning ("tableViewのCellの高さを決める")
+   //tableViewのCellの高さを決める
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240.0
+        return 500.0
     }
 
-    // tableViewのCellがタップされた時に呼ばれる
+    // tableViewのCellがタップされた時に呼ばれるメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt:", indexPath)
+        let vc = ArticleViewController()
+        #warning("タップされたらFireStoreの値をの ArticleViewControllerへ 渡す")
+        //vc.articleInfo =
+        // 画面遷移
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     
-    //Firestoreから読み込み
+    #warning("Firestoreから読み込み")
     func readTasksFromFirestore(){
-        //let articleId = self.getArticleId()
+       
         //作成日時の降順に並べ替えて取得する
         db.collection("Articles").order(by: "createdAt", descending: true).getDocuments { (querySnapShot, err) in
             if let err = err{
@@ -75,20 +98,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     print("\(document.documentID) => \(document.data())")
                 }
                 // for文を全て回し終えたらリロード
-                self.reloadTableView()
+                //self.reloadTableView()
             }
         }
     }
     
-    func reloadTableView() {
-        tableView.reloadData()
+    //func reloadTableView() {
+        //tableView.reloadData()
     }
     
    
-        }
+        
     
     
-
-
-
-//func reloadTableview() {tableView.reloadData()

@@ -7,19 +7,23 @@ import FirebaseUI
 
 class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    
+   
     var articles: [Article] = []
     var postDatas: [PostData] = []
     let db = Firestore.firestore()
     let storage = Storage.storage()
     
-    //UIPickerView
-    @IBOutlet weak var categoryPicker: UIPickerView!
-    @IBOutlet weak var stylePicker: UIPickerView!
+    // TextFieldにPickerで選択したものを反映させる接続
+    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var styleTextField: UITextField!
     
-    //Label
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var styleLabel: UILabel!
+    // Pickerの宣言と配列
+    var pickerView1: UIPickerView = UIPickerView()
+    var array1 = ["Work","Love","Family","Life"]
+    
+    var pickerView2: UIPickerView = UIPickerView()
+    var array2 = ["episode","essay","my history"]
+    
     
     //Button
     @IBOutlet weak var releaseButton: UIButton!
@@ -31,26 +35,102 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var writingImageView = UIImageView()
     
     
-    let categoryList = ["Work","Love","Family","Life"]
-    var categoryPickerView = UIPickerView()
-    
-    
-    let styleList = ["episode","essay","my history"]
-    var stylePickerView =  UIPickerView()
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryPickerView.delegate = self
-        categoryPickerView.dataSource = self
+        //PickerView1の生成
+        pickerView1.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: pickerView1.bounds.size.height)
+        // tagでpickerView1を識別
+        pickerView1.tag = 1
+        pickerView1.delegate   = self
+        pickerView1.dataSource = self
         
-        stylePickerView.delegate = self
-        stylePickerView.dataSource = self
-        //categoryLabel.inputView = pickerView
+        let vi1 = UIView(frame: pickerView1.bounds)
+        vi1.backgroundColor = UIColor.white
+        vi1.addSubview(pickerView1)
+        
+        // 決定Barの生成
+        let toolBar1 = UIToolbar()
+        toolBar1.barStyle = UIBarStyle.default
+        toolBar1.isTranslucent = true
+        toolBar1.tintColor = UIColor.black
+        let doneButton1   = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(WritingAddViewController.donePressed))
+        let spaceButton1  = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        toolBar1.setItems([spaceButton1, doneButton1], animated: false)
+        toolBar1.isUserInteractionEnabled = true
+        toolBar1.sizeToFit()
+        
+        // インプットビューの設定
+        categoryTextField.inputView = vi1
+        categoryTextField.inputAccessoryView = toolBar1
+        
+        
+        //PickerView2の生成
+        pickerView2.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: pickerView2.bounds.size.height)
+        pickerView2.tag = 2
+        pickerView2.delegate   = self
+        pickerView2.dataSource = self
+        
+        let vi2 = UIView(frame: pickerView2.bounds)
+        vi2.backgroundColor = UIColor.white
+        vi2.addSubview(pickerView2)
+        
+        
+        
+        let toolBar2 = UIToolbar()
+        toolBar2.barStyle = UIBarStyle.default
+        toolBar2.isTranslucent = true
+        toolBar2.tintColor = UIColor.black
+        let doneButton2   = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(WritingAddViewController.donePressed))
+        let spaceButton2  = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        toolBar2.setItems([spaceButton2, doneButton2], animated: false)
+        toolBar2.isUserInteractionEnabled = true
+        toolBar2.sizeToFit()
+        
+        styleTextField.inputView = vi2
+        styleTextField.inputAccessoryView = toolBar2
+        
     }
     
+    
+    // Done Button
+    @objc func donePressed() {
+        view.endEditing(true)
+    }
+    
+    // ドラムロールのタイトル
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 1 {
+            return array1[row]
+        } else {
+            return array2[row]
+        }
+    }
+    
+    // ドラムロールの列数
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // ドラムロールの行数
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 1 {
+            return array1.count
+        } else {
+            return array2.count
+        }
+    }
+    
+    // ドラムロールで選択した内容を categoryField, StyleFieldに反映させる
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 1 {
+            categoryTextField.text = array1[row]
+        } else {
+            styleTextField.text = array2[row]
+        }
+    }
+    
+    #warning("categoryとstyleの追加")
     //Firestoreへの書き込み(title,text)
     func createToFirestore(_ title:String){
         //let articleId = self.getArticleId()
@@ -71,9 +151,9 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
-    //FireStoreへ書き込みす(image→ StorageにてURLを取得し保存)
+    //FireStoreへ書き込み(image / StorageにてURLを取得し保存)
     func saveToFirestore() {
-            if let selectImage = writingImageView.image {
+        if let selectImage = writingImageView.image {
             // 今日日付をintに変換して被らない名前にする
             let imageName = "\(Date().timeIntervalSince1970).jpg"
             // 今回はpostsというフォルダーの中に画像を保存する
@@ -94,8 +174,6 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
                                 let downloadUrlStr = downloadUrl.absoluteString
                                 // ③firestoreへ保存を行う
                                 Firestore.firestore().collection("posts").document().setData([
-                                    //"title": title,
-                                    //"text": text,
                                     "imageURL": downloadUrlStr,
                                     "createdAt": FieldValue.serverTimestamp()
                                 ]){ error in
@@ -117,6 +195,7 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
             }
         }
     }
+    
     //公開ボタンを押したときの処理
     @IBAction func tapReleaseButton(_ sender: Any) {
         print("⭐️公開ボタンを押しました")
@@ -132,50 +211,20 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
         //Firestoreに保存する処理の完成
         self.saveToFirestore()
         self.createToFirestore(title)
-    
+        
         HUD.flash(.success, delay: 0.3)
         // 前の画面に戻る
         //navigationController?.popViewController(animated: true)
     }
     
-    //Pickerの列の数（縦）
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+   
+   
+    // 公開ButtonをtapしたらArticleViewControllerへと遷移する
+    @IBAction func tapGoToNext(_ sender: Any) {
+        let nextVC = storyboard?.instantiateViewController(identifier: "ArticleView") as! ArticleViewController
+        navigationController?.pushViewController(nextVC, animated: true)
+        
     }
-    //Pickerの横の数（行）
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categoryList.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int) -> String? {
-        return categoryList[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        categoryLabel.text = categoryList[row]
-    }
-    
-    #warning("AritocleViewControllerへの遷移")
     
 }
-/* //公開ボタンを押したときの処理
- @IBAction func tapReleaseButton(_ sender: Any) {
-     guard let title = titleTextField.text else {
-         print("公開ボタンを押しました")
-         return
-     }
-     //タイトルが空白の時のエラー処理
-     if title.isEmpty {
-         print(title, "titleが空です！")
-         HUD.flash(.labeledError(title: nil, subtitle: "タイトルが入力されていません！"), delay: 1)
-         return
-     }
-     //Firestoreに保存する処理の完成
-     self.saveToFirestore()
-     self.createToFirestore(title)
- 
-     HUD.flash(.success, delay: 0.3)
-     // 前の画面に戻る
-     //navigationController?.popViewController(animated: true)
- }
- */
+

@@ -10,6 +10,7 @@ class Article: Codable {
     var articleId: String
     var title: String
     var text: String?
+    #warning("categoryとstyleの追加")
     //var category: String
     //var style: String
     
@@ -17,7 +18,7 @@ class Article: Codable {
     //作成日
     var createdAt:Timestamp
     
-    
+    #warning("categoryとstyleの追加")
     init(articleId: String, title: String, text: String = "", createdAt:Timestamp) {
         self.articleId = articleId
         self.title = title

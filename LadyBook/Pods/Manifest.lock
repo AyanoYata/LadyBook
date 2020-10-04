@@ -340,12 +340,12 @@ PODS:
     - nanopb/encode (= 1.30906.0)
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
-  - Parchment (2.4.0)
   - PKHUD (5.3.0)
   - PromisesObjC (1.2.10)
   - SDWebImage (5.9.0):
     - SDWebImage/Core (= 5.9.0)
   - SDWebImage/Core (5.9.0)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -355,8 +355,8 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseFirestoreSwift
   - FirebaseUI/Storage
-  - Parchment
   - PKHUD
+  - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
@@ -380,10 +380,10 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
-    - Parchment
     - PKHUD
     - PromisesObjC
     - SDWebImage
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -406,11 +406,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
-  Parchment: 002785473861582385db5c6725165353c500198e
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 77646098908d8bc7a1e22b388aa9588e4917d952
+PODFILE CHECKSUM: ce6d5a3722f571e249960d7bdbc784e92cd15c6d
 
 COCOAPODS: 1.9.3
