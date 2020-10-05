@@ -1,7 +1,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class First2ViewController: UIViewController {
+class First2ViewController: UIViewController, IndicatorInfoProvider {
     
     
     @IBOutlet weak var writtingButton: UIButton!
@@ -22,5 +22,12 @@ class First2ViewController: UIViewController {
         
     }
     
+    //XLPagerTabStripに必須
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Top")
+
     
+    }
+    
+
 }

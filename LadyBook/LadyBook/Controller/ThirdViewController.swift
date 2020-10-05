@@ -33,8 +33,18 @@ class ThirdViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     //XLPagerTabStripに必須
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
+        return IndicatorInfo(title: "Love")
     }
+    
+    //画面描画の都度、tableViewを更新処理
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppearが呼ばれた")
+        
+        dump(articles)
+        dump(postDatas)
+        }
+    
     
     //tableViewのrowの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

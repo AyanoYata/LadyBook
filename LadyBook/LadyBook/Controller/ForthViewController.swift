@@ -36,7 +36,7 @@ class ForthViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     //XLPagerTabStripに必須
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
+        return IndicatorInfo(title: "Family")
     }
    
     //tableViewのrowの数を返す
