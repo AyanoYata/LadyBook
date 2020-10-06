@@ -185,11 +185,12 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
                                     }
                                 }
                             } else {
-                                // downloadURLの取得が失敗した場合の処理
+                                // downloadURLの取得が失敗した場合の
                             }
                         }
                     } else {
                         // storageの保存が失敗した場合の処理
+                        print(error!.localizedDescription)
                     }
                 })
             }

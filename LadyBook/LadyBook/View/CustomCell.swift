@@ -5,6 +5,8 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet weak var imegeView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var Category: UILabel!
+    @IBOutlet weak var Style: UILabel!
     @IBOutlet weak var textView: UITextView!
     
     

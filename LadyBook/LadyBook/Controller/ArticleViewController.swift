@@ -13,20 +13,24 @@ class ArticleViewController: UIViewController {
     let storage = Storage.storage()
     
     
-
+    #warning("<#T##message###>")
     @IBOutlet weak var writingImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var articleTextView: UITextView!
     
-
+    #warning("UIPickerで選択した Category,Style")
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var styleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    
     //Firestoreから読み込み
     func readTasksFromFirestore(){
-        //let articleId = self.getArticleId()
         //作成日時の降順に並べ替えて取得する
         db.collection("Articles").order(by: "createdAt", descending: true).getDocuments { (querySnapShot, err) in
             if let err = err{
