@@ -7,6 +7,7 @@ class ThirdViewController: UIViewController, IndicatorInfoProvider, UITableViewD
    
 
     
+   
     @IBOutlet weak var thirdTableView: UITableView!
     
     

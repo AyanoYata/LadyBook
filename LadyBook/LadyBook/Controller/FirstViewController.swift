@@ -9,7 +9,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
   
     @IBOutlet weak var firstTableView: UITableView!
-    
+    @IBOutlet weak var writtingButton: UIButton!
     
     //article情報の一覧。ここに全ての情報を保持
     var articles: [Article] = []
@@ -49,6 +49,9 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         dump(postDatas)
         }
     
+    @IBAction func tapWrittingButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "WritingView", sender: nil)
+    }
     
     //tableViewのrowの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
