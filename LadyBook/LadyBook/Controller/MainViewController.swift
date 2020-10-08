@@ -12,9 +12,10 @@ class MainViewController: ButtonBarPagerTabStripViewController {
         //バーの色
         settings.style.buttonBarBackgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         //ボタンの色
-        settings.style.buttonBarItemBackgroundColor = UIColor(red: 73/255, green: 72/255, blue: 62/255, alpha: 1)
+        //settings.style.buttonBarItemBackgroundColor = UIColor(red: 73/255, green: 72/255, blue: 62/255, alpha: 1)
+        settings.style.buttonBarItemBackgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         //セルの文字色
-        settings.style.buttonBarItemTitleColor = UIColor.white
+        settings.style.buttonBarItemTitleColor = UIColor.black
         //セレクトバーの色
         settings.style.selectedBarBackgroundColor = UIColor(red: 254/255, green: 0, blue: 124/255, alpha: 1)
         super.viewDidLoad()

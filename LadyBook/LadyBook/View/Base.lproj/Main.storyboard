@@ -55,13 +55,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-Cx-8rv">
-                                <rect key="frame" x="20" y="243" width="171" height="166"/>
+                                <rect key="frame" x="20" y="246" width="171" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DC-g7-CQd">
                                 <rect key="frame" x="294" y="791" width="93" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="23"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -69,24 +69,25 @@
                                     <segue destination="9uc-b0-Q5S" kind="presentation" identifier="Message2" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="IGp-ha-fq9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-xo-ehR">
-                                <rect key="frame" x="24" y="614" width="367" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">このBookは女性が経験してきたStoryをシェアするプラットフォームです。
-仕事・恋愛・結婚・子供・家族
-さまざまなStoryがここにあります。</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="akL-mj-LGV">
-                                <rect key="frame" x="20" y="478" width="367" height="128"/>
+                                <rect key="frame" x="19" y="420" width="367" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">はじめまして。
 LadyBookを開いていただき
 ありがとうございます！</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-xo-ehR">
+                                <rect key="frame" x="16" y="570" width="398" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">このBookは女性が経験してきたStoryをシェアするプラットフォームです。
+仕事・恋愛・独立・結婚・子供・家族
+
+さまざまなStoryがここにはあります。</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -107,29 +108,35 @@ LadyBookを開いていただき
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWR-gh-bWh">
-                                <rect key="frame" x="283" y="768" width="93" height="43"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Present" translatesAutoresizingMaskIntoConstraints="NO" id="xGG-t3-uRH">
+                                <rect key="frame" x="223" y="594" width="171" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="18"/>
-                                <state key="normal" title="Next"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kGC-kw-awD">
+                                <rect key="frame" x="20" y="343" width="374" height="314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">あなたのStoryは、
+彼女を助け・勇気づけ・元気に
+する力を持っています。
+ そしてあなたも、
+彼女のStoryによって新たな場所に出会えることでしょう。
+
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWR-gh-bWh">
+                                <rect key="frame" x="289" y="796" width="93" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="23"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="Zmp-zz-X9E" kind="presentation" identifier="Message3" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Rcp-em-9wC"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Present" translatesAutoresizingMaskIntoConstraints="NO" id="xGG-t3-uRH">
-                                <rect key="frame" x="205" y="558" width="171" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kGC-kw-awD">
-                                <rect key="frame" x="66" y="341" width="328" height="267"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">あなたがこれまで経験してきたStoryは、誰かを助け・勇気づけ・元気にさせる力を持っています。そしてあなたも誰かのStoryによって、新たな場所へと出会えることでしょう。
-
-</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aK2-oH-2pi"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,7 +144,7 @@ LadyBookを開いていただき
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHQ-XQ-bPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-568" y="104"/>
+            <point key="canvasLocation" x="-568.1159420289855" y="103.79464285714285"/>
         </scene>
         <!--Message3 View Controller-->
         <scene sceneID="Hb6-2R-pky">
@@ -147,30 +154,35 @@ LadyBookを開いていただき
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHp-nx-unT">
-                                <rect key="frame" x="43" y="398" width="328" height="267"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">わたしたちのStoryは、わたしたちをさらに自由にさせる。
-LadyBookは、いつでもあなたの側にいます。
-
-</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paF-CN-P7q">
-                                <rect key="frame" x="278" y="781" width="93" height="43"/>
+                                <rect key="frame" x="292" y="792" width="93" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="18"/>
-                                <state key="normal" title="Open"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="23"/>
+                                <state key="normal" title="Open">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="yVN-mD-0Ik" kind="presentation" identifier="TabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mQH-2k-8C0"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Smile" translatesAutoresizingMaskIntoConstraints="NO" id="qdZ-uW-KUw">
-                                <rect key="frame" x="110" y="167" width="171" height="166"/>
+                                <rect key="frame" x="122" y="169" width="171" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHp-nx-unT">
+                                <rect key="frame" x="20" y="495" width="430" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">わたしたちのStoryは、
+わたしたちをさらに自由にする。
+
+LadyBookは、
+いつでもあなたの側にいます。
+
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9cF-z6-Z6P"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -178,7 +190,7 @@ LadyBookは、いつでもあなたの側にいます。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3p-6l-TWW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="104"/>
+            <point key="canvasLocation" x="250.72463768115944" y="103.79464285714285"/>
         </scene>
         <!--Search-->
         <scene sceneID="Lgq-Ke-bXG">
@@ -357,7 +369,7 @@ LadyBookは、いつでもあなたの側にいます。
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="urE-Ma-Ubm"/>
-                        <color key="backgroundColor" red="0.91498154399999998" green="0.3783349097" blue="0.73496383430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="thirdTableView" destination="veg-d2-3Vp" id="xj2-id-fsk"/>
@@ -382,7 +394,7 @@ LadyBookは、いつでもあなたの側にいます。
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OxF-aS-8fU"/>
-                        <color key="backgroundColor" red="0.97793960570000005" green="0.98218160870000004" blue="0.62682956460000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="forthTableView" destination="qHd-VB-Ytr" id="kug-67-nMl"/>
@@ -407,7 +419,7 @@ LadyBookは、いつでもあなたの側にいます。
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uWB-Wf-C4e"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="fifthTableView" destination="D7r-CF-ey2" id="yfp-hx-uAK"/>
@@ -432,7 +444,7 @@ LadyBookは、いつでもあなたの側にいます。
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nv7-qd-rWS"/>
-                        <color key="backgroundColor" red="0.78119027699999999" green="1" blue="0.99374550549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="secondTableView" destination="vlQ-a6-2Dg" id="tp3-kU-mje"/>
@@ -464,7 +476,7 @@ LadyBookは、いつでもあなたの側にいます。
                                     <constraint firstAttribute="height" constant="65" id="QWr-Lx-V8U"/>
                                     <constraint firstAttribute="width" constant="75" id="zJm-DE-USC"/>
                                 </constraints>
-                                <state key="normal" image="pen"/>
+                                <state key="normal" image="Book&amp;Pen"/>
                                 <connections>
                                     <action selector="tapWrittingButton:" destination="Wvt-8U-2Qb" eventType="touchUpInside" id="wZh-wY-KZd"/>
                                     <segue destination="M51-02-4yn" kind="presentation" identifier="WritingView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2Lj-Rc-y4o"/>
@@ -472,7 +484,7 @@ LadyBookは、いつでもあなたの側にいます。
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qne-oR-3Gp"/>
-                        <color key="backgroundColor" red="0.90379470589999999" green="0.75492852929999998" blue="0.75446468590000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="First"/>
                         <constraints>
                             <constraint firstItem="qne-oR-3Gp" firstAttribute="bottom" secondItem="QNy-Zb-unX" secondAttribute="bottom" constant="45" id="AiR-Wd-7Nq"/>
@@ -675,14 +687,14 @@ LadyBookは、いつでもあなたの側にいます。
         </scene>
     </scenes>
     <resources>
-        <image name="Heart" width="1024" height="1024"/>
-        <image name="Present" width="1024" height="1024"/>
+        <image name="Book&amp;Pen" width="200" height="200"/>
+        <image name="Heart" width="200" height="200"/>
+        <image name="Present" width="200" height="200"/>
         <image name="Smile" width="1024" height="1024"/>
         <image name="candle" width="1400" height="788"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="pen" width="256" height="256"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rogo" width="500" height="500"/>
         <systemColor name="labelColor">
@@ -693,9 +705,6 @@ LadyBookは、いつでもあなたの側にいます。
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -70,16 +70,15 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     }
     
    //tableViewのCellの高さを決める
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 500.0
-    }
+    }*/
 
     // tableViewのCellがタップされた時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt:", indexPath)
         let vc = ArticleViewController()
         #warning("タップされたらFireStoreの値をの ArticleViewControllerへ 渡す")
-        //vc.articleInfo =
         // 画面遷移
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -106,8 +105,8 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         }
     }
     
-    //func reloadTableView() {
-        //tableView.reloadData()
+    /*func reloadTableView() {
+        tableView.reloadData()*/
     }
     
    

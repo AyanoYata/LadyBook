@@ -132,7 +132,7 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     #warning("categoryとstyleの追加")
     //Firestoreへの書き込み(title,text)
-    func createToFirestore(_ title:String){
+    func createToFirestore(_ title:String) -> String {
         //let articleId = self.getArticleId()
         // articleIDに割り振るランダムな文字列を生成
         let articleId = db.collection("Articles").document().documentID
@@ -149,10 +149,12 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
             //変換に失敗したとき
             print("エラー\(error)")
         }
+
+        return articleId
     }
     
     //FireStoreへ書き込み(image / StorageにてURLを取得し保存)
-    func saveToFirestore() {
+    func saveToFirestore(articleId: String) {
         if let selectImage = writingImageView.image {
             // 今日日付をintに変換して被らない名前にする
             let imageName = "\(Date().timeIntervalSince1970).jpg"
@@ -173,13 +175,11 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
                                 // String型へ変換を行う
                                 let downloadUrlStr = downloadUrl.absoluteString
                                 // ③firestoreへ保存を行う
-                                Firestore.firestore().collection("posts").document().setData([
+                                Firestore.firestore().collection("Articles").document(articleId).setData([
                                     "imageURL": downloadUrlStr,
-                                    "createdAt": FieldValue.serverTimestamp()
-                                ]){ error in
-                                    if error != nil {
-                                        // firestoreへ保存が失敗した場合
-                                        
+                                ], merge: true) { error in
+                                    if let error = error {
+                                        print(error)
                                     } else {
                                         // firestoreへ保存が成功した場合
                                     }
@@ -210,12 +210,12 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
             return
         }
         //Firestoreに保存する処理の完成
-        self.saveToFirestore()
-        self.createToFirestore(title)
+        //self.saveToFirestore()
+       // self.createToFirestore(title)
+            let articleId = self.createToFirestore(title)
+            self.saveToFirestore(articleId: articleId)
         
         HUD.flash(.success, delay: 0.3)
-        // 前の画面に戻る
-        //navigationController?.popViewController(animated: true)
     }
     
    
