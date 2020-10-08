@@ -5,10 +5,9 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet weak var imegeView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var Category: UILabel!
-    @IBOutlet weak var Style: UILabel!
-    @IBOutlet weak var textView: UITextView!
-    
+    //@IBOutlet weak var Category: UILabel!
+    //@IBOutlet weak var Style: UILabel!
+    @IBOutlet weak var textField: UITextField!
     
     
     override func awakeFromNib() {
@@ -20,5 +19,4 @@ class CustomCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-    
 }

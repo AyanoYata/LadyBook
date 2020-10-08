@@ -20,6 +20,7 @@
 		CE2230C624FD280700AFE3C7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* CustomCell.xib */; };
 		CE2CEA1725085AE0003B7D98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */; };
 		CE4D39A3250CAD4200FA6536 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D39A1250CAD4200FA6536 /* FirstViewController.swift */; };
+		CE6190D2252F26D400209EDF /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6190D1252F26D400209EDF /* MyTabBar.swift */; };
 		CE8ADEA6250C9C1600A4159E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ADEA5250C9C1600A4159E /* Article.swift */; };
 		CEA23DFD2525A19200A50DBE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA23DFC2525A19200A50DBE /* SecondViewController.swift */; };
 		CEA23E002525A22600A50DBE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA23DFF2525A22600A50DBE /* ThirdViewController.swift */; };
@@ -52,6 +53,7 @@
 		CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE457FD1E32B289BAE5DB8EF /* Pods-LadyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.release.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.release.xcconfig"; sourceTree = "<group>"; };
 		CE4D39A1250CAD4200FA6536 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		CE6190D1252F26D400209EDF /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
 		CE8ADEA5250C9C1600A4159E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		CEA23DFC2525A19200A50DBE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CEA23DFF2525A22600A50DBE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CE07A3C225036B5D0046D7A5 /* UIViewconstraints.swift */,
+				CE6190D1252F26D400209EDF /* MyTabBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -148,9 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				CE2230B124FC6E7B00AFE3C7 /* Main.storyboard */,
-				CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */,
-				CE2230C324FD280700AFE3C7 /* CustomCell.swift */,
 				CE2230C424FD280700AFE3C7 /* CustomCell.xib */,
+				CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 		CE2230C124FC6ED800AFE3C7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE2230C324FD280700AFE3C7 /* CustomCell.swift */,
 				CE2230AF24FC6E7B00AFE3C7 /* ViewController.swift */,
 				CEFA01FF252868840060E9C6 /* Message1ViewController.swift */,
 				CED32DD9252B969A00008776 /* Message2ViewController.swift */,
@@ -305,6 +308,7 @@
 				CE1F505B25289B4200EAF387 /* FifthViewController.swift in Sources */,
 				CE8ADEA6250C9C1600A4159E /* Article.swift in Sources */,
 				CEF8C7362520314300C8FC67 /* PostData.swift in Sources */,
+				CE6190D2252F26D400209EDF /* MyTabBar.swift in Sources */,
 				CEF9404E251646BA000E032E /* WritingViewController.swift in Sources */,
 				CEE449E62503275A009C572E /* MainViewController.swift in Sources */,
 				CE4D39A3250CAD4200FA6536 /* FirstViewController.swift in Sources */,
@@ -467,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 388DH3R55T;
 				INFOPLIST_FILE = "$(SRCROOT)/LadyBook/Accessory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 388DH3R55T;
 				INFOPLIST_FILE = "$(SRCROOT)/LadyBook/Accessory/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

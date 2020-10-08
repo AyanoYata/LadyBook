@@ -11,12 +11,11 @@ class Message1ViewController: UIViewController {
         
         //グラデーションカラー
         let color1 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1).cgColor     //白
-        let color2 = UIColor(red: 230.0/256.0, green: 150/256.0, blue: 256/256.0, alpha: 1).cgColor   //ピンク
+        let color2 = UIColor(red: 256.0/256.0, green: 100/256.0, blue: 256/256.0, alpha: 1).cgColor   //ピンク
         
         
         //CAGradientLayerにグラデーションさせるカラーをセット
         gradientLayer.colors = [color1, color2]
-        
         
         //左上が白で右下がピンク
         gradientLayer.startPoint = CGPoint.init(x: 0.3, y: 0)
@@ -25,7 +24,5 @@ class Message1ViewController: UIViewController {
         //ViewControllerのViewレイヤーにグラデーションレイヤーを挿入する
         self.view.layer.insertSublayer(gradientLayer,at:0)
     }
-    
-    
 }
 

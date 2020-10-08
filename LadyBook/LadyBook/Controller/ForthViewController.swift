@@ -47,7 +47,7 @@ class ForthViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     //tableViewのCellに表示する内容を返す(indexPathの個数だけ呼ばれる)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Customcell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
         if articles.isEmpty == false {
         cell.titleLabel?.text = articles[indexPath.row].title
         }

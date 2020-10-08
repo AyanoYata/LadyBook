@@ -4,8 +4,8 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class SecondViewController: UIViewController, IndicatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
-   
-
+    
+    
     
     
     @IBOutlet weak var secondTableView: UITableView!
@@ -16,7 +16,6 @@ class SecondViewController: UIViewController, IndicatorInfoProvider, UITableView
     var postDatas: [PostData] = []
     //FirestoreのDBのインスタンスを作成
     let db = Firestore.firestore()
-    
     
     
     // 上タブのタイトル
@@ -38,7 +37,7 @@ class SecondViewController: UIViewController, IndicatorInfoProvider, UITableView
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Work")
     }
-
+    
     
     //tableViewのrowの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,19 +47,15 @@ class SecondViewController: UIViewController, IndicatorInfoProvider, UITableView
     
     //tableViewのCellに表示する内容を返す(indexPathの個数だけ呼ばれる)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Customcell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
         if articles.isEmpty == false {
-        cell.titleLabel?.text = articles[indexPath.row].title
+            cell.titleLabel?.text = articles[indexPath.row].title
         }
-    return cell
+        return cell
     }
     
-   //tableViewのCellの高さを決める
+    //tableViewのCellの高さを決める
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 500.0
     }
-    
-    
-    
-    
 }

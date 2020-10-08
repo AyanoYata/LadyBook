@@ -4,7 +4,7 @@ import XLPagerTabStrip
 
 
 class MainViewController: ButtonBarPagerTabStripViewController {
-   
+    
     
     var articles: [Article] = []
     
@@ -19,20 +19,18 @@ class MainViewController: ButtonBarPagerTabStripViewController {
         //セレクトバーの色
         settings.style.selectedBarBackgroundColor = UIColor(red: 254/255, green: 0, blue: 124/255, alpha: 1)
         super.viewDidLoad()
-            
-    }
-        override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-            //管理されるViewControllerを返す処理
-            let firstVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "First")
-            let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Second")
-            let thirdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Third")
-            let forthVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Forth")
-            let fifthVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Fifth")
-            let childViewControllers:[UIViewController] = [firstVC, secondVC, thirdVC, forthVC, fifthVC]
-            return childViewControllers
-        }
-   
         
     }
-    
-  
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        //管理されるViewControllerを返す処理
+        let firstVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "First")
+        let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Second")
+        let thirdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Third")
+        let forthVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Forth")
+        let fifthVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Fifth")
+        let childViewControllers:[UIViewController] = [firstVC, secondVC, thirdVC, forthVC, fifthVC]
+        return childViewControllers
+    }
+}
+
+

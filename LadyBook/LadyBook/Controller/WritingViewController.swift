@@ -1,8 +1,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-//import FirebaseStorage
-//import FirebaseUI
+
 
 class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -10,11 +9,9 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     var articles: [Article] = []
     let db = Firestore.firestore()
-    //let storage = Storage.storage()
+    
     
     @IBOutlet weak var nextButton: UIButton!
-    
-
     @IBOutlet weak var writingImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var articleTextView: UITextView!
@@ -29,6 +26,16 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         self.titleTextField.delegate = self
         self.articleTextView.delegate = self
         
+        // Imageに枠線をつける
+        //self.writingImageView.layer.borderColor = UIColor.systemGray5.cgColor  //　色
+        //self.writingImageView.layer.borderWidth = 1   //線の幅
+        
+        
+        // TextViewに枠線をつける
+        articleTextView.layer.borderColor = UIColor.systemGray5.cgColor  //　色
+        articleTextView.layer.borderWidth = 1.0 //線の幅
+        articleTextView.layer.cornerRadius = 10.0  // 枠を角丸にする
+        articleTextView.layer.masksToBounds = true
     }
     
     
@@ -93,16 +100,14 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             return false
         }
     
-    
-    #warning("TextView入力後、リターンキーでkeyboardを閉じるコード")
-    // StoryのKeyboardを閉じる
-    func articleTextViewShouldReturn(_ textView: UITextView) -> Bool {
-            //textView.resignFirstResponder()
-            //articleTextView.text = textView.text
-        //titleTextField.text = textField.text
-    self.view.endEditing(true)
+    // StoryのKeyboardもreturnkeyで閉じる
+    func articleTextViewShouldReturn(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            articleTextView.resignFirstResponder()
             return false
         }
+        return true
+    }
 
     
     
@@ -118,10 +123,6 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             writingAddViewController.writingImageView = writingImageView
         }
     }
-    
-    
-    
-    
 }
  
 
