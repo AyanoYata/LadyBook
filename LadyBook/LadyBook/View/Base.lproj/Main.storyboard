@@ -217,9 +217,11 @@ LadyBookは、
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candle" translatesAutoresizingMaskIntoConstraints="NO" id="jBr-EL-xFl">
-                                <rect key="frame" x="20" y="44" width="374" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candle" translatesAutoresizingMaskIntoConstraints="NO" id="jBr-EL-xFl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jBr-EL-xFl" secondAttribute="height" multiplier="11:5" id="dMc-hv-zmL"/>
+                                </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duk-Dh-QdM">
                                 <rect key="frame" x="20" y="359" width="374" height="503"/>
@@ -252,6 +254,11 @@ LadyBookは、
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4jx-cK-ini"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="jBr-EL-xFl" secondAttribute="trailing" id="1wp-Sp-dcb"/>
+                            <constraint firstItem="jBr-EL-xFl" firstAttribute="top" secondItem="4jx-cK-ini" secondAttribute="top" id="DNc-nA-FiE"/>
+                            <constraint firstItem="jBr-EL-xFl" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" id="UXe-5b-6LT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="articleTextView" destination="duk-Dh-QdM" id="yiI-ac-GVR"/>
@@ -591,7 +598,6 @@ LadyBookは、
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapGoToNext:" destination="1Qe-3s-Du2" eventType="touchUpInside" id="rYx-tn-bhW"/>
                                     <action selector="tapReleaseButton:" destination="1Qe-3s-Du2" eventType="touchUpInside" id="A2O-5b-jdt"/>
                                 </connections>
                             </button>

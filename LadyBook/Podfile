@@ -14,6 +14,6 @@ target 'LadyBook' do
     pod 'Firebase/Storage'
     pod 'FirebaseUI/Storage'
     pod 'XLPagerTabStrip'
-
+    pod 'Nuke'
 
 end

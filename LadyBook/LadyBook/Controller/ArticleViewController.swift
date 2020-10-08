@@ -3,9 +3,12 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseStorage
 import FirebaseUI
+import Nuke
 
 class ArticleViewController: UIViewController {
-
+    
+    
+    var articleId: String?
     
     var articles: [Article] = []
     var postDatas: [PostData] = []
@@ -23,34 +26,37 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var styleLabel: UILabel!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    
-    //Firestoreから読み込み
-    func readTasksFromFirestore(){
-        //作成日時の降順に並べ替えて取得する
-        db.collection("Articles").order(by: "createdAt", descending: true).getDocuments { (querySnapShot, err) in
-            if let err = err{
-                //エラー時
-                print("エラー\(err)")
-            } else {
-                //データ取得に成功
-                //取得したDocument群の1つ1つのDocumentについて処理をする
-                for document in querySnapShot!.documents{
-                    //各DocumentからはDocumentIDとその中身のdataを取得できる
-                    print("\(document.documentID) => \(document.data())")
+        //  db.collection("Articles").document(articleId!).getDocumentで、articleIdのデータを取り出し表示する
+        db.collection("Articles").document(articleId!).getDocument { (documentSnapshot, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            if let documentSnapshot = documentSnapshot {
+                let data = documentSnapshot.data()
+                
+                self.titleTextField.text = data?["title"] as? String
+                self.articleTextView.text = data?["text"] as? String
+                //imageURLをwritingImageViewに反映させる
+                if let imageURL = data?["imageURL"] as? String {
+                    Nuke.loadImage(with: URL(string: imageURL)!, into: self.writingImageView)
+                    
+                    Nuke.loadImage(with: URL(string: imageURL)!, options: ImageLoadingOptions(), into: self.writingImageView, progress: nil) { (result: Result<ImageResponse, ImagePipeline.Error>) in
+                        
+                        switch result {
+                        case .success(let imageResponse):
+                            self.imageRateLayoutConstraint.constant = imageResponse.image.size.width / imageResponse.image.size.height
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
                 }
-                // for文を全て回し終えたらリロード
-               //self.reloadTextField()
             }
         }
     }
-    
-   
 }
-/* func reloadTableView() {
- tableView.reloadData()
- }*/

@@ -7,6 +7,7 @@ import FirebaseUI
 
 class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    var articleId: String?
    
     var articles: [Article] = []
     var postDatas: [PostData] = []
@@ -153,79 +154,68 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return articleId
     }
     
-    //FireStoreへ書き込み(image / StorageにてURLを取得し保存)
-    func saveToFirestore(articleId: String) {
-        if let selectImage = writingImageView.image {
-            // 今日日付をintに変換して被らない名前にする
-            let imageName = "\(Date().timeIntervalSince1970).jpg"
-            // 今回はpostsというフォルダーの中に画像を保存する
-            let reference = Storage.storage().reference().child("posts/\(imageName)")
-            // 画像データがそのままだとサイズが大きかったりするので、サイズを調整
-            if let imageData = selectImage.jpegData(compressionQuality: 0.8) {
-                // メタデータを設定
-                let metadata = StorageMetadata()
-                metadata.contentType = "image/jpeg"
-                // ①ここでstorageへの保存を行う
-                reference.putData(imageData, metadata: metadata, completion:{(metadata, error) in
-                    if let _ = metadata {
-                        // ②storageへの保存が成功した場合はdownloadURLの取得を行う
-                        reference.downloadURL{(url,error) in
-                            if let downloadUrl = url {
-                                // downloadURLの取得が成功した場合
-                                // String型へ変換を行う
-                                let downloadUrlStr = downloadUrl.absoluteString
-                                // ③firestoreへ保存を行う
-                                Firestore.firestore().collection("Articles").document(articleId).setData([
-                                    "imageURL": downloadUrlStr,
-                                ], merge: true) { error in
-                                    if let error = error {
-                                        print(error)
-                                    } else {
-                                        // firestoreへ保存が成功した場合
-                                    }
-                                }
-                            } else {
-                                // downloadURLの取得が失敗した場合の
-                            }
-                        }
-                    } else {
-                        // storageの保存が失敗した場合の処理
-                        print(error!.localizedDescription)
-                    }
-                })
-            }
-        }
-    }
-    
-    //公開ボタンを押したときの処理
+
+    // 公開ボタンを押下時の処理
+    // FireStoreへ書き込み(StorageにてimageのURLをString型で取得し → 次画面に値を渡し遷移する)
     @IBAction func tapReleaseButton(_ sender: Any) {
         print("⭐️公開ボタンを押しました")
-        guard let title = titleTextField.text else {
-            return
-        }
-        //タイトルが空白の時のエラー処理
-        if title.isEmpty {
-            print(title, "titleが空です！")
-            HUD.flash(.labeledError(title: nil, subtitle: "タイトルが入力されていません！"), delay: 1)
-            return
-        }
-        //Firestoreに保存する処理の完成
-        //self.saveToFirestore()
-       // self.createToFirestore(title)
+            guard let title = titleTextField.text else {
+                return
+            }
+            //タイトルが空白の時のエラー処理
+            if title.isEmpty {
+                print(title, "titleが空です！")
+                HUD.flash(.labeledError(title: nil, subtitle: "タイトルが入力されていません！"), delay: 1)
+                return
+            }
+            //Firestoreに保存する処理の完成
             let articleId = self.createToFirestore(title)
-            self.saveToFirestore(articleId: articleId)
-        
-        HUD.flash(.success, delay: 0.3)
-    }
-    
-   
-   
-    // 公開ButtonをtapしたらArticleViewControllerへと遷移する
-    @IBAction func tapGoToNext(_ sender: Any) {
-        let nextVC = storyboard?.instantiateViewController(identifier: "ArticleView") as! ArticleViewController
-        navigationController?.pushViewController(nextVC, animated: true)
-        
-    }
-    
+
+            if let selectImage = writingImageView.image {
+                // 今日日付をintに変換して被らない名前にする
+                let imageName = "\(Date().timeIntervalSince1970).jpg"
+                // 今回はpostsというフォルダーの中に画像を保存する
+                let reference = Storage.storage().reference().child("posts/\(imageName)")
+                // 画像データがそのままだとサイズが大きかったりするので、サイズを調整
+                if let imageData = selectImage.jpegData(compressionQuality: 0.8) {
+                    // メタデータを設定
+                    let metadata = StorageMetadata()
+                    metadata.contentType = "image/jpeg"
+                    // ①ここでstorageへの保存を行う
+                    reference.putData(imageData, metadata: metadata, completion:{(metadata, error) in
+                        if let _ = metadata {
+                            // ②storageへの保存が成功した場合はdownloadURLの取得を行う
+                            reference.downloadURL{(url,error) in
+                                if let downloadUrl = url {
+                                    // downloadURLの取得が成功した場合
+                                    // String型へ変換を行う
+                                    let downloadUrlStr = downloadUrl.absoluteString
+                                    // ③firestoreへ保存を行う
+                                    Firestore.firestore().collection("Articles").document(articleId).setData([
+                                        "imageURL": downloadUrlStr,
+                                    ], merge: true) { error in
+                                        if let error = error {
+                                            print(error)
+                                        } else {
+                                            // firestoreへ保存が成功した場合
+                                            HUD.flash(.success, delay: 0.3)
+
+                                            let nextVC = self.storyboard?.instantiateViewController(identifier: "ArticleView") as! ArticleViewController
+                                            nextVC.articleId = articleId
+                                            self.navigationController?.pushViewController(nextVC, animated: true)
+                                        }
+                                    }
+                                } else {
+                                    // downloadURLの取得が失敗した場合の処理
+                                }
+                            }
+                        } else {
+                            // storageの保存が失敗した場合の処理
+                            print(error!.localizedDescription)
+                        }
+                    })
+                }
+            }
+        }
 }
 
