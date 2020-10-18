@@ -201,14 +201,13 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
                                 let downloadUrlStr = downloadUrl.absoluteString
                                 // ③firestoreへ保存を行う
                                 Firestore.firestore().collection("Articles").document(articleId).setData([
-                                    "imageURL": downloadUrlStr,
+                                    "imageURL": downloadUrlStr, // ここでimageURLの値を渡す
                                 ], merge: true) { error in
                                     if let error = error {
                                         print(error)
                                     } else {
                                         // firestoreへ保存が成功した場合
                                         HUD.flash(.success, delay: 0.3)
-                                        
                                         let nextVC = self.storyboard?.instantiateViewController(identifier: "ArticleView") as! ArticleViewController
                                         nextVC.articleId = articleId
                                         self.navigationController?.pushViewController(nextVC, animated: true)
@@ -224,11 +223,6 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 })
             }
         } else {
-            HUD.flash(.success, delay: 0.3)
-            
-            let nextVC = self.storyboard?.instantiateViewController(identifier: "ArticleView") as! ArticleViewController
-            nextVC.articleId = articleId
-            self.navigationController?.pushViewController(nextVC, animated: true)
             
         }
     }

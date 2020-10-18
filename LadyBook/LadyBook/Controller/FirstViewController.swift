@@ -75,8 +75,11 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         if articles.isEmpty == false {
             cell.titleLabel?.text = articles[indexPath.row].title
             cell.textField?.text = articles[indexPath.row].text
-            
             // Nukeで画像を表示させる
+            print(articles[indexPath.row].imageURL)
+            //_ = Nuke.loadImage(with: getDownloadUrlStr, into: self.writingImageView)
+          
+
         }
         return cell
     }
@@ -113,8 +116,8 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
                     
                     if let title = data["title"] as? String,
                        let text = data["text"] as? String,
+                       let imageURL = data["imageURL"] as? String,
                        let createdAt = data["createdAt"] as? Timestamp {
-                        
                         self.articles.append(Article(articleId: document.documentID, title: title, text: text, createdAt: createdAt))
                     }
                     

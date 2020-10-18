@@ -10,7 +10,7 @@ class Article: Codable {
     var articleId: String
     var title: String
     var text: String?
-    //var imageURL: String?
+    var imageURL: String?
     var createdAt:Timestamp
     //var category: String
     //var style: String
@@ -20,7 +20,6 @@ class Article: Codable {
         self.articleId = articleId
         self.title = title
         self.text = text
-        //self.imageURL = imageURL
         self.createdAt = createdAt
         //self.category = category
         //self.style = style
