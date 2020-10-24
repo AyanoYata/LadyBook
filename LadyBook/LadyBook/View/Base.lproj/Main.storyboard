@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -18,23 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rogo" translatesAutoresizingMaskIntoConstraints="NO" id="1pO-H8-SEU">
-                                <rect key="frame" x="-100" y="194" width="600" height="330"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rogo" translatesAutoresizingMaskIntoConstraints="NO" id="2uh-M3-hKY">
+                                <rect key="frame" x="32" y="194" width="350" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="330" id="O2T-ca-6kW"/>
-                                    <constraint firstAttribute="width" constant="600" id="gbp-cB-iR8"/>
+                                    <constraint firstAttribute="width" secondItem="2uh-M3-hKY" secondAttribute="height" multiplier="1:1" id="CYk-JE-w6S"/>
+                                    <constraint firstAttribute="height" constant="350" id="Cga-e6-76l"/>
+                                    <constraint firstAttribute="width" constant="350" id="Vw7-e9-e7V"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1pO-H8-SEU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Xx-9v-fUJ"/>
-                            <constraint firstItem="1pO-H8-SEU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="304-lD-LMj"/>
-                            <constraint firstItem="1pO-H8-SEU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-100" id="APf-Zy-Azh"/>
-                            <constraint firstItem="1pO-H8-SEU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="150" id="dwx-IR-yKF"/>
-                            <constraint firstAttribute="trailing" secondItem="1pO-H8-SEU" secondAttribute="trailing" constant="-100" id="g9t-sb-r0a"/>
-                            <constraint firstItem="1pO-H8-SEU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xnu-X7-ufm"/>
+                            <constraint firstItem="2uh-M3-hKY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Hqh-1y-S9v"/>
+                            <constraint firstItem="2uh-M3-hKY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Qiq-17-zh9"/>
+                            <constraint firstItem="2uh-M3-hKY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RkC-Pv-d8b"/>
+                            <constraint firstItem="2uh-M3-hKY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="XuO-Eh-b69"/>
+                            <constraint firstItem="2uh-M3-hKY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="csq-ng-75x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2uh-M3-hKY" secondAttribute="trailing" constant="32" id="pxa-ac-cDE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dV6-tu-TKS"/>
@@ -44,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2083" y="104"/>
+            <point key="canvasLocation" x="-2084.057971014493" y="103.79464285714285"/>
         </scene>
         <!--Message1 View Controller-->
         <scene sceneID="Yj5-nM-oad">
@@ -55,19 +56,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="7Z3-Cx-8rv">
-                                <rect key="frame" x="24" y="244" width="167" height="165"/>
+                                <rect key="frame" x="20" y="244" width="214" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="95d-aH-37b"/>
-                                    <constraint firstAttribute="width" constant="170" id="egA-6z-flR"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gRN-RD-GIB"/>
-                                    <constraint firstAttribute="height" constant="165" id="xUG-YY-CSy"/>
+                                    <constraint firstAttribute="height" constant="200" id="VmW-W8-QnB"/>
+                                    <constraint firstAttribute="width" secondItem="7Z3-Cx-8rv" secondAttribute="height" multiplier="200:187" id="gzI-1M-ifn"/>
+                                    <constraint firstAttribute="width" constant="200" id="vzW-j0-GDh"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="akL-mj-LGV">
-                                <rect key="frame" x="20" y="424" width="370" height="130"/>
+                                <rect key="frame" x="20" y="454" width="370" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="75i-Wc-Mfu"/>
+                                    <constraint firstAttribute="height" constant="110" id="75i-Wc-Mfu"/>
                                     <constraint firstAttribute="width" constant="370" id="SMF-bW-w0o"/>
+                                    <constraint firstAttribute="width" secondItem="akL-mj-LGV" secondAttribute="height" multiplier="37:13" id="nu2-FX-5uB"/>
                                 </constraints>
                                 <string key="text">はじめまして。
 LadyBookを開いていただき
@@ -76,37 +77,45 @@ LadyBookを開いていただき
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-xo-ehR">
-                                <rect key="frame" x="20" y="681" width="400" height="110"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-xo-ehR">
+                                <rect key="frame" x="20" y="704" width="375" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="87L-li-wTP"/>
                                     <constraint firstAttribute="width" constant="400" id="D7p-DB-Vaz"/>
+                                    <constraint firstAttribute="height" constant="120" id="PZx-s2-NS7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="rW0-rY-hoy"/>
+                                    <constraint firstAttribute="width" secondItem="6A3-xo-ehR" secondAttribute="height" multiplier="25:7" id="vlQ-GK-nm0"/>
                                 </constraints>
-                                <string key="text">仕事・恋愛・独立
-結婚・子育て・家族
-さまざまなStoryがここにはあります。</string>
+                                <string key="text">仕事・恋愛・独身・結婚・子育て
+さまざまなStoryがここにあります。</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5qO-44-b81">
-                                <rect key="frame" x="20" y="554" width="425" height="130"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5qO-44-b81">
+                                <rect key="frame" x="20" y="579" width="370" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="425" id="Gpr-jW-Z8a"/>
-                                    <constraint firstAttribute="height" constant="130" id="i3a-ui-9m4"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="375" id="2BW-sY-DsT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="380" id="Alq-AJ-a1g"/>
+                                    <constraint firstAttribute="height" constant="120" id="h27-eF-rB0"/>
+                                    <constraint firstAttribute="width" secondItem="5qO-44-b81" secondAttribute="height" multiplier="189:65" id="rVb-N7-gJH"/>
+                                    <constraint firstAttribute="width" constant="370" id="x1S-Zs-klH"/>
                                 </constraints>
                                 <string key="text">このBookは
 女性が経験してきたStoryを
 シェアするプラットフォームです。</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DC-g7-CQd">
-                                <rect key="frame" x="300" y="796" width="95" height="45"/>
+                                <rect key="frame" x="300" y="807" width="89" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="7DC-g7-CQd" secondAttribute="height" multiplier="9:4" id="AF9-G1-aRx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="X8S-Te-tlE"/>
+                                    <constraint firstAttribute="height" constant="40" id="dmu-xK-Win"/>
                                     <constraint firstAttribute="width" constant="95" id="kE6-OE-UEn"/>
-                                    <constraint firstAttribute="height" constant="45" id="lmU-TH-dVP"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="95" id="pAi-ge-0S5"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="wHx-8N-Cyc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="23"/>
                                 <state key="normal" title="Next">
@@ -121,19 +130,25 @@ LadyBookを開いていただき
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="Message1"/>
                         <constraints>
-                            <constraint firstItem="6A3-xo-ehR" firstAttribute="top" secondItem="akL-mj-LGV" secondAttribute="bottom" constant="127" id="4AF-IE-LLo"/>
-                            <constraint firstItem="5qO-44-b81" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="6mF-Wo-ZFR"/>
+                            <constraint firstItem="5qO-44-b81" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="04p-JM-dKN"/>
+                            <constraint firstItem="7Z3-Cx-8rv" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="5h4-5X-WTQ"/>
                             <constraint firstItem="7DC-g7-CQd" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="300" id="6o8-5K-PJ9"/>
-                            <constraint firstItem="7Z3-Cx-8rv" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="8cu-Y9-G0G"/>
-                            <constraint firstItem="akL-mj-LGV" firstAttribute="top" secondItem="7Z3-Cx-8rv" secondAttribute="bottom" constant="15" id="Job-s7-UYp"/>
-                            <constraint firstItem="7Z3-Cx-8rv" firstAttribute="top" secondItem="2mx-vn-8So" secondAttribute="top" constant="200" id="S81-Eh-wIS"/>
-                            <constraint firstItem="2mx-vn-8So" firstAttribute="trailing" secondItem="7Z3-Cx-8rv" secondAttribute="trailing" constant="223" id="W6s-91-D28"/>
-                            <constraint firstItem="7Z3-Cx-8rv" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="24" id="WHn-nk-4CC"/>
+                            <constraint firstItem="2mx-vn-8So" firstAttribute="trailing" secondItem="7DC-g7-CQd" secondAttribute="trailing" constant="25" id="BfM-Dt-DVy"/>
+                            <constraint firstItem="5qO-44-b81" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="MK8-fi-uVB"/>
+                            <constraint firstItem="5qO-44-b81" firstAttribute="centerX" secondItem="Gez-de-Fij" secondAttribute="centerX" id="SwX-MR-3EC"/>
+                            <constraint firstItem="5qO-44-b81" firstAttribute="top" secondItem="akL-mj-LGV" secondAttribute="bottom" constant="15" id="VHE-rn-7lH"/>
                             <constraint firstItem="6A3-xo-ehR" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="WPA-UJ-p6i"/>
+                            <constraint firstItem="7Z3-Cx-8rv" firstAttribute="top" secondItem="2mx-vn-8So" secondAttribute="top" constant="200" id="XOv-Nu-FM0"/>
+                            <constraint firstItem="6A3-xo-ehR" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="Ydw-f0-3iI"/>
                             <constraint firstItem="akL-mj-LGV" firstAttribute="leading" secondItem="2mx-vn-8So" secondAttribute="leading" constant="20" id="YeW-37-6Oe"/>
-                            <constraint firstItem="7Z3-Cx-8rv" firstAttribute="top" secondItem="2mx-vn-8So" secondAttribute="top" constant="215" id="a4C-4x-eoB"/>
-                            <constraint firstItem="7DC-g7-CQd" firstAttribute="top" secondItem="6A3-xo-ehR" secondAttribute="bottom" constant="5" id="dqo-Eu-pjT"/>
-                            <constraint firstItem="5qO-44-b81" firstAttribute="top" secondItem="7Z3-Cx-8rv" secondAttribute="bottom" constant="145" id="yUV-aE-HH8"/>
+                            <constraint firstItem="akL-mj-LGV" firstAttribute="top" secondItem="7Z3-Cx-8rv" secondAttribute="bottom" constant="10" id="ang-VO-had"/>
+                            <constraint firstItem="akL-mj-LGV" firstAttribute="centerX" secondItem="Gez-de-Fij" secondAttribute="centerX" id="fHg-JV-8aa"/>
+                            <constraint firstItem="2mx-vn-8So" firstAttribute="bottom" secondItem="7DC-g7-CQd" secondAttribute="bottom" constant="15" id="fTj-D0-5Q6"/>
+                            <constraint firstItem="2mx-vn-8So" firstAttribute="trailing" secondItem="7DC-g7-CQd" secondAttribute="trailing" constant="25" id="kSF-L4-BaT"/>
+                            <constraint firstItem="2mx-vn-8So" firstAttribute="trailing" secondItem="7DC-g7-CQd" secondAttribute="trailing" constant="25" id="kkV-e6-WLZ"/>
+                            <constraint firstItem="6A3-xo-ehR" firstAttribute="top" secondItem="5qO-44-b81" secondAttribute="bottom" constant="5" id="kxZ-gg-Ydw"/>
+                            <constraint firstItem="2mx-vn-8So" firstAttribute="trailing" secondItem="akL-mj-LGV" secondAttribute="trailing" constant="24" id="ofm-AE-Edd"/>
+                            <constraint firstItem="2mx-vn-8So" firstAttribute="trailing" secondItem="7DC-g7-CQd" secondAttribute="trailing" constant="25" id="pA2-qs-9Nd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -150,10 +165,16 @@ LadyBookを開いていただき
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kGC-kw-awD">
-                                <rect key="frame" x="20" y="429" width="375" height="245"/>
+                                <rect key="frame" x="20" y="409" width="370" height="245"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="370" id="0Ig-b0-bZ1"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="375" id="5Xk-yu-c32"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="375" id="AZ4-jq-QQV"/>
+                                    <constraint firstAttribute="width" secondItem="kGC-kw-awD" secondAttribute="height" multiplier="74:49" id="KXT-E4-ibM"/>
                                     <constraint firstAttribute="width" constant="375" id="O3E-3Z-yif"/>
-                                    <constraint firstAttribute="height" constant="245" id="jDn-xW-vpy"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="375" id="Q9d-ka-fyp"/>
+                                    <constraint firstAttribute="height" constant="245" id="Sac-Zb-m8c"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="zFz-9h-Bfq"/>
                                 </constraints>
                                 <string key="text">あなたのStoryは、
 彼女を助け・勇気づけ・元気に
@@ -163,16 +184,16 @@ LadyBookを開いていただき
 
 </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWR-gh-bWh">
-                                <rect key="frame" x="290" y="804" width="95" height="45"/>
+                                <rect key="frame" x="290" y="803" width="99" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="G4K-ei-KDt"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="PSv-R5-DsA"/>
+                                    <constraint firstAttribute="width" secondItem="KWR-gh-bWh" secondAttribute="height" multiplier="88:39" id="Hkh-8M-ISK"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="XX3-Bw-5PB"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="mxh-jy-lzO"/>
-                                    <constraint firstAttribute="height" constant="45" id="vMJ-4g-vlV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="23"/>
                                 <state key="normal" title="Next">
@@ -183,9 +204,13 @@ LadyBookを開いていただき
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Present" translatesAutoresizingMaskIntoConstraints="NO" id="xGG-t3-uRH">
-                                <rect key="frame" x="235" y="654" width="155" height="150"/>
+                                <rect key="frame" x="235" y="674" width="159" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="2Ht-DN-KJS"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="Ne3-uz-ttf"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="OK7-Y9-z4D"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="YI9-wP-HPJ"/>
+                                    <constraint firstAttribute="width" secondItem="xGG-t3-uRH" secondAttribute="height" multiplier="53:40" id="hBc-oA-wxR"/>
+                                    <constraint firstAttribute="height" constant="120" id="y5h-Ml-RtH"/>
                                     <constraint firstAttribute="width" constant="155" id="yrB-Rk-0Bu"/>
                                 </constraints>
                             </imageView>
@@ -194,11 +219,21 @@ LadyBookを開いていただき
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KWR-gh-bWh" firstAttribute="leading" secondItem="aK2-oH-2pi" secondAttribute="leading" constant="290" id="5Fu-wJ-TUC"/>
-                            <constraint firstItem="KWR-gh-bWh" firstAttribute="top" secondItem="xGG-t3-uRH" secondAttribute="bottom" id="OEQ-5r-QYD"/>
+                            <constraint firstItem="kGC-kw-awD" firstAttribute="leading" secondItem="aK2-oH-2pi" secondAttribute="leading" constant="20" id="7sJ-Yc-9pM"/>
+                            <constraint firstItem="aK2-oH-2pi" firstAttribute="trailing" secondItem="xGG-t3-uRH" secondAttribute="trailing" constant="20" id="8fa-2R-8Pz"/>
+                            <constraint firstItem="kGC-kw-awD" firstAttribute="leading" secondItem="aK2-oH-2pi" secondAttribute="leading" constant="20" id="DJw-X0-cWX"/>
+                            <constraint firstItem="aK2-oH-2pi" firstAttribute="trailing" secondItem="KWR-gh-bWh" secondAttribute="trailing" constant="25" id="GVH-oG-5NX"/>
+                            <constraint firstItem="xGG-t3-uRH" firstAttribute="top" secondItem="kGC-kw-awD" secondAttribute="bottom" constant="20" id="GnF-d5-d9G"/>
+                            <constraint firstItem="kGC-kw-awD" firstAttribute="top" secondItem="aK2-oH-2pi" secondAttribute="top" constant="365" id="J4f-hX-yF4"/>
                             <constraint firstItem="xGG-t3-uRH" firstAttribute="leading" secondItem="aK2-oH-2pi" secondAttribute="leading" constant="235" id="Tfo-ci-iyh"/>
-                            <constraint firstItem="xGG-t3-uRH" firstAttribute="top" secondItem="aK2-oH-2pi" secondAttribute="top" constant="610" id="eSV-h5-Gr3"/>
-                            <constraint firstItem="kGC-kw-awD" firstAttribute="top" secondItem="aK2-oH-2pi" secondAttribute="top" constant="385" id="fNF-iT-VLe"/>
+                            <constraint firstItem="kGC-kw-awD" firstAttribute="centerX" secondItem="2ug-Mz-weF" secondAttribute="centerX" id="Vvn-VW-gyv"/>
+                            <constraint firstItem="aK2-oH-2pi" firstAttribute="trailing" secondItem="KWR-gh-bWh" secondAttribute="trailing" constant="25" id="XaP-wK-AzP"/>
+                            <constraint firstItem="aK2-oH-2pi" firstAttribute="trailing" secondItem="xGG-t3-uRH" secondAttribute="trailing" constant="20" id="YUB-y8-YyW"/>
+                            <constraint firstItem="kGC-kw-awD" firstAttribute="leading" secondItem="aK2-oH-2pi" secondAttribute="leading" constant="20" id="beR-xU-zYz"/>
+                            <constraint firstItem="aK2-oH-2pi" firstAttribute="bottom" secondItem="KWR-gh-bWh" secondAttribute="bottom" constant="15" id="d6d-aE-l5I"/>
                             <constraint firstItem="kGC-kw-awD" firstAttribute="leading" secondItem="aK2-oH-2pi" secondAttribute="leading" constant="20" id="jQS-G5-moC"/>
+                            <constraint firstItem="aK2-oH-2pi" firstAttribute="trailing" secondItem="xGG-t3-uRH" secondAttribute="trailing" constant="20" id="kHY-H1-vfn"/>
+                            <constraint firstItem="kGC-kw-awD" firstAttribute="leading" secondItem="aK2-oH-2pi" secondAttribute="leading" constant="20" id="uz3-Ea-Zlw"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -215,17 +250,21 @@ LadyBookを開いていただき
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Smile" translatesAutoresizingMaskIntoConstraints="NO" id="qdZ-uW-KUw">
-                                <rect key="frame" x="122" y="169" width="170" height="165"/>
+                                <rect key="frame" x="122" y="169" width="170" height="145"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="qdZ-uW-KUw" secondAttribute="height" multiplier="85:73" id="E7I-xa-eRP"/>
+                                    <constraint firstAttribute="height" constant="145" id="G4l-bB-pSk"/>
                                     <constraint firstAttribute="width" constant="170" id="WFE-eH-skD"/>
-                                    <constraint firstAttribute="height" constant="165" id="hgR-zG-7lp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="iQa-eY-Ljm"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHp-nx-unT">
-                                <rect key="frame" x="20" y="434" width="430" height="270"/>
+                                <rect key="frame" x="20" y="434" width="374" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="Aom-X6-ti4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="5mU-6B-Gxm"/>
                                     <constraint firstAttribute="width" constant="430" id="HqS-Yo-1iQ"/>
+                                    <constraint firstAttribute="height" constant="200" id="oT0-Xc-hnW"/>
+                                    <constraint firstAttribute="width" secondItem="tHp-nx-unT" secondAttribute="height" multiplier="374:205" id="ucu-Do-Yyv"/>
                                 </constraints>
                                 <string key="text">わたしたちのStoryは、
 わたしたちをさらに自由にする。
@@ -235,14 +274,16 @@ LadyBookは、
 
 </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paF-CN-P7q">
-                                <rect key="frame" x="290" y="804" width="95" height="45"/>
+                                <rect key="frame" x="290" y="807" width="99" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="HPS-GA-cZq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="2sc-dJ-tu3"/>
+                                    <constraint firstAttribute="width" secondItem="paF-CN-P7q" secondAttribute="height" multiplier="9:4" id="XNE-al-l8z"/>
                                     <constraint firstAttribute="width" constant="95" id="aY0-fP-UCD"/>
+                                    <constraint firstAttribute="height" constant="40" id="h5A-ub-7SK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="23"/>
                                 <state key="normal" title="Open">
@@ -256,10 +297,15 @@ LadyBookは、
                         <viewLayoutGuide key="safeArea" id="9cF-z6-Z6P"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tHp-nx-unT" firstAttribute="top" secondItem="qdZ-uW-KUw" secondAttribute="bottom" constant="100" id="Cwf-Fa-MB9"/>
+                            <constraint firstItem="9cF-z6-Z6P" firstAttribute="bottom" secondItem="paF-CN-P7q" secondAttribute="bottom" constant="15" id="6L0-zU-zsh"/>
+                            <constraint firstItem="qdZ-uW-KUw" firstAttribute="top" secondItem="9cF-z6-Z6P" secondAttribute="top" constant="125" id="9jY-k1-qTu"/>
+                            <constraint firstItem="tHp-nx-unT" firstAttribute="top" secondItem="qdZ-uW-KUw" secondAttribute="bottom" constant="120" id="LnF-dT-4uQ"/>
                             <constraint firstItem="qdZ-uW-KUw" firstAttribute="centerX" secondItem="pi0-Ch-QoD" secondAttribute="centerX" id="Oqy-SN-pAh"/>
-                            <constraint firstItem="9cF-z6-Z6P" firstAttribute="bottom" secondItem="paF-CN-P7q" secondAttribute="bottom" constant="13" id="Pe8-eM-hRg"/>
-                            <constraint firstItem="qdZ-uW-KUw" firstAttribute="top" secondItem="9cF-z6-Z6P" secondAttribute="top" constant="125" id="a7y-Ii-t55"/>
+                            <constraint firstItem="9cF-z6-Z6P" firstAttribute="trailing" secondItem="qdZ-uW-KUw" secondAttribute="trailing" constant="122" id="Peg-WC-MwH"/>
+                            <constraint firstItem="9cF-z6-Z6P" firstAttribute="trailing" secondItem="paF-CN-P7q" secondAttribute="trailing" constant="25" id="d5W-ot-nKY"/>
+                            <constraint firstItem="9cF-z6-Z6P" firstAttribute="trailing" secondItem="tHp-nx-unT" secondAttribute="trailing" constant="20" id="dH3-IB-Cmb"/>
+                            <constraint firstItem="tHp-nx-unT" firstAttribute="leading" secondItem="9cF-z6-Z6P" secondAttribute="leading" constant="20" id="diT-ig-lxj"/>
+                            <constraint firstItem="qdZ-uW-KUw" firstAttribute="leading" secondItem="9cF-z6-Z6P" secondAttribute="leading" constant="122" id="pl0-Pl-zob"/>
                             <constraint firstItem="paF-CN-P7q" firstAttribute="leading" secondItem="9cF-z6-Z6P" secondAttribute="leading" constant="290" id="rIt-rj-c0Y"/>
                             <constraint firstItem="tHp-nx-unT" firstAttribute="leading" secondItem="9cF-z6-Z6P" secondAttribute="leading" constant="20" id="xy8-2x-pzA"/>
                         </constraints>
@@ -611,9 +657,6 @@ LadyBookは、
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v72-l0-5jO">
-                                <rect key="frame" x="16" y="44" width="382" height="44"/>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-f1-CXy">
                                 <rect key="frame" x="16" y="88" width="380" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -654,11 +697,9 @@ LadyBookは、
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="WritingView"/>
                         <constraints>
-                            <constraint firstItem="Lxl-hX-UzM" firstAttribute="top" secondItem="v72-l0-5jO" secondAttribute="bottom" constant="100" id="Bjr-2P-bI2"/>
                             <constraint firstItem="WHZ-rd-ZEY" firstAttribute="leading" secondItem="GV9-VY-NpT" secondAttribute="leading" constant="345" id="YrH-SC-1K0"/>
                             <constraint firstItem="V7L-f1-CXy" firstAttribute="centerX" secondItem="iDS-QL-p2h" secondAttribute="centerX" id="Zae-6R-GQW"/>
                             <constraint firstItem="WHZ-rd-ZEY" firstAttribute="top" secondItem="GV9-VY-NpT" secondAttribute="top" constant="5" id="eJ4-AP-6ad"/>
-                            <constraint firstItem="V7L-f1-CXy" firstAttribute="top" secondItem="v72-l0-5jO" secondAttribute="bottom" constant="60" id="hGw-uk-PJb"/>
                             <constraint firstItem="Lxl-hX-UzM" firstAttribute="centerX" secondItem="iDS-QL-p2h" secondAttribute="centerX" id="ubI-Rx-PE7"/>
                         </constraints>
                     </view>
@@ -822,7 +863,7 @@ LadyBookは、
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="rogo" width="500" height="500"/>
+        <image name="rogo" width="1000" height="1000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

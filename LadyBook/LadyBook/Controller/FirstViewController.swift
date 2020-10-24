@@ -12,14 +12,14 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     @IBOutlet weak var firstTableView: UITableView!
     @IBOutlet weak var writtingButton: UIButton!
     
-    //article情報の一覧。ここに全ての情報を保持
+    //空の配列にデータを追加していく
     var articles: [Article] = []
     var postDatas: [PostData] = []
     
     //FirestoreのDBのインスタンスを作成
     let db = Firestore.firestore()
     
-    // 上タブのタイトルボタン
+    // 上タブのタイトルボタン　 Indicator・表示版
     var itemInfo: IndicatorInfo = "Top"
     
     
@@ -29,14 +29,14 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         firstTableView.delegate = self
         firstTableView.dataSource = self
         
-        firstTableView.rowHeight = UITableView.automaticDimension
-        firstTableView.estimatedRowHeight = UITableView.automaticDimension
+        firstTableView.rowHeight = UITableView.automaticDimension   // automaticDimension・自動寸法
+        firstTableView.estimatedRowHeight = UITableView.automaticDimension // estimatedRowHeight・推定行高
         
         //CustomeCellの登録
         let nib = UINib(nibName: "CustomCell", bundle: nil)
-        firstTableView.register(nib, forCellReuseIdentifier: "CustomCell")
+        firstTableView.register(nib, forCellReuseIdentifier: "CustomCell") // register・登録
         
-        readTasksFromFirestore()
+        readArticlesFromFirestore()
     }
     
     
@@ -100,7 +100,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     
     // Firestoreからの読み込み
-    func readTasksFromFirestore(){
+    func readArticlesFromFirestore(){
         //作成日時の降順に並べ替えて取得する
         db.collection("Articles").order(by: "createdAt", descending: true).whereField("category", isEqualTo: "Work").getDocuments { (querySnapShot, err) in
                 if let err = err{
@@ -126,4 +126,5 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
             }
         }
     }
+    
 }
