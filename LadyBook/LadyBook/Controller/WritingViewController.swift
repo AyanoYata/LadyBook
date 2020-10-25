@@ -11,7 +11,11 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     let db = Firestore.firestore()
     
     
-    @IBOutlet weak var nextButton: UIButton!
+    var editBarButtonItem1: UIBarButtonItem!
+    var editBarButtonItem2: UIBarButtonItem!
+    
+    
+    //@IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var writingImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var articleTextView: UITextView!
@@ -25,17 +29,49 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         self.titleTextField.delegate = self
         self.articleTextView.delegate = self
+                
+        // NavigetionBarにボタンを設置
+        editBarButtonItem1 = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(editBarButton1Tapped(_:)))
+        editBarButtonItem2 = UIBarButtonItem(title: "< Back", style: .done, target: self, action: #selector(editBarButton2Tapped(_:)))
         
-        // Imageに枠線をつける
-        //self.writingImageView.layer.borderColor = UIColor.systemGray5.cgColor  //　色
-        //self.writingImageView.layer.borderWidth = 1   //線の幅
-        
+        // ボタンをViewに反映
+        self.navigationItem.rightBarButtonItems = [editBarButtonItem1]
+        self.navigationItem.leftBarButtonItems = [editBarButtonItem2]
         
         // TextViewに枠線をつける
         articleTextView.layer.borderColor = UIColor.systemGray5.cgColor  //　色
         articleTextView.layer.borderWidth = 1.0 //線の幅
         articleTextView.layer.cornerRadius = 10.0  // 枠を角丸にする
         articleTextView.layer.masksToBounds = true
+    }
+    
+    
+    @objc func editBarButton1Tapped(_ sender: UIBarButtonItem) {
+        print("【Next】ボタンが押された!")
+        //self.performSegue(withIdentifier: "WritingAdd", sender: nil)
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WritingAdd") as! WritingAddViewController
+        nextVC.titleTextField = titleTextField
+        nextVC.articleTextView = articleTextView
+        nextVC.writingImageView = writingImageView
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navigationController = segue.destination as? UINavigationController,
+           let writingAddViewController = navigationController.viewControllers.first as? WritingAddViewController {
+            writingAddViewController.titleTextField = titleTextField
+            writingAddViewController.articleTextView = articleTextView
+            writingAddViewController.writingImageView = writingImageView
+        }
+    }*/
+    
+    
+    
+    @objc func editBarButton2Tapped(_ sender: UIBarButtonItem) {
+        print("【< Back】ボタンが押された!")
+        //self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -109,20 +145,6 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         return true
     }
 
-    
-    
-    @IBAction func tapNextButton(_ sender: Any) {
-       
-    }
-    //NextButtonをタップし、次のページに遷移した際 imageView,title,Storyの値を渡す
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let navigationController = segue.destination as? UINavigationController,
-           let writingAddViewController = navigationController.viewControllers.first as? WritingAddViewController {
-            writingAddViewController.titleTextField = titleTextField
-            writingAddViewController.articleTextView = articleTextView
-            writingAddViewController.writingImageView = writingImageView
-        }
-    }
+
 }
  
-

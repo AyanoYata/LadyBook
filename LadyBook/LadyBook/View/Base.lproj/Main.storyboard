@@ -335,17 +335,11 @@ LadyBookは、
         <!--Article View Controller-->
         <scene sceneID="YKs-Nn-QU4">
             <objects>
-                <viewController storyboardIdentifier="ArticleView" id="nQa-rI-mRy" customClass="ArticleViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nQa-rI-mRy" customClass="ArticleViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMX-2Z-kJV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBr-EL-xFl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="188"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jBr-EL-xFl" secondAttribute="height" multiplier="11:5" id="dMc-hv-zmL"/>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duk-Dh-QdM">
                                 <rect key="frame" x="20" y="405" width="374" height="457"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -374,15 +368,23 @@ LadyBookは、
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBr-EL-xFl">
+                                <rect key="frame" x="0.0" y="104" width="414" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jBr-EL-xFl" secondAttribute="height" multiplier="11:5" id="dMc-hv-zmL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4jx-cK-ini"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AricleView"/>
                         <constraints>
                             <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="jBr-EL-xFl" secondAttribute="trailing" id="1wp-Sp-dcb"/>
                             <constraint firstItem="jBr-EL-xFl" firstAttribute="top" secondItem="4jx-cK-ini" secondAttribute="top" id="DNc-nA-FiE"/>
                             <constraint firstItem="jBr-EL-xFl" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" id="UXe-5b-6LT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LBa-pJ-41J"/>
                     <connections>
                         <outlet property="articleTextView" destination="duk-Dh-QdM" id="yiI-ac-GVR"/>
                         <outlet property="categoryLabel" destination="rIz-Bk-Zix" id="YUW-w6-AeE"/>
@@ -394,7 +396,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXf-av-HvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5224.6376811594209" y="-1335.2678571428571"/>
+            <point key="canvasLocation" x="7445" y="-1335"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="NjK-3e-8sa">
@@ -508,7 +510,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMb-i5-auW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4486.9565217391309" y="-577.23214285714278"/>
+            <point key="canvasLocation" x="5429" y="-577"/>
         </scene>
         <!--Life-->
         <scene sceneID="EAf-Ln-47m">
@@ -533,7 +535,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khf-Px-spj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5272" y="-577"/>
+            <point key="canvasLocation" x="6193" y="-577"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="mR7-xi-Gdb">
@@ -558,7 +560,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2m-Qe-Cc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5996" y="-577"/>
+            <point key="canvasLocation" x="6990" y="-577"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="ss3-zv-tKU">
@@ -583,7 +585,22 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRo-ID-tBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3722" y="-577"/>
+            <point key="canvasLocation" x="4643" y="-577"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5aZ-c0-QDZ">
+            <objects>
+                <viewController id="uzf-a9-mnf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oc8-zj-aOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rDR-UO-mcI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R40-ox-6D2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2935" y="-1349"/>
         </scene>
         <!--FirstView Controller-->
         <scene sceneID="iXi-dr-hTM">
@@ -610,7 +627,7 @@ LadyBookは、
                                 <state key="normal" image="Book&amp;Pen"/>
                                 <connections>
                                     <action selector="tapWrittingButton:" destination="Wvt-8U-2Qb" eventType="touchUpInside" id="wZh-wY-KZd"/>
-                                    <segue destination="M51-02-4yn" kind="presentation" identifier="WritingView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2Lj-Rc-y4o"/>
+                                    <segue destination="8cb-Oa-kE6" kind="presentation" identifier="WritingView" modalPresentationStyle="fullScreen" id="9tF-qQ-DXP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -633,7 +650,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyj-9X-F16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2933.3333333333335" y="-577.23214285714278"/>
+            <point key="canvasLocation" x="3872" y="-577"/>
         </scene>
         <!--Writing View Controller-->
         <scene sceneID="ZDt-Px-Uw9">
@@ -644,21 +661,21 @@ LadyBookは、
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXs-zW-wVw">
-                                <rect key="frame" x="18" y="258" width="378" height="34"/>
+                                <rect key="frame" x="16" y="344" width="378" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e5x-Pw-sAa">
-                                <rect key="frame" x="20" y="325" width="374" height="537"/>
+                                <rect key="frame" x="20" y="455" width="374" height="407"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-f1-CXy">
-                                <rect key="frame" x="16" y="88" width="380" height="128"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-f1-CXy">
+                                <rect key="frame" x="137" y="177" width="140" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -666,49 +683,20 @@ LadyBookは、
                                     <constraint firstAttribute="height" constant="130" id="nyx-7q-eqC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHZ-rd-ZEY">
-                                <rect key="frame" x="324" y="49" width="56" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="OGx-5x-nwi"/>
-                                    <constraint firstAttribute="height" constant="40" id="yX4-2c-79s"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapNextButton:" destination="M51-02-4yn" eventType="touchUpInside" id="CC0-Rp-biv"/>
-                                    <segue destination="c45-O6-Lzz" kind="show" id="E46-H5-JTC"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxl-hX-UzM">
-                                <rect key="frame" x="147" y="138" width="120" height="28"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="0Oh-4d-W2L"/>
-                                    <constraint firstAttribute="height" constant="30" id="23E-Uh-2Qx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GV9-VY-NpT"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="WritingView"/>
                         <constraints>
-                            <constraint firstItem="WHZ-rd-ZEY" firstAttribute="leading" secondItem="GV9-VY-NpT" secondAttribute="leading" constant="345" id="YrH-SC-1K0"/>
                             <constraint firstItem="V7L-f1-CXy" firstAttribute="centerX" secondItem="iDS-QL-p2h" secondAttribute="centerX" id="Zae-6R-GQW"/>
-                            <constraint firstItem="WHZ-rd-ZEY" firstAttribute="top" secondItem="GV9-VY-NpT" secondAttribute="top" constant="5" id="eJ4-AP-6ad"/>
-                            <constraint firstItem="Lxl-hX-UzM" firstAttribute="centerX" secondItem="iDS-QL-p2h" secondAttribute="centerX" id="ubI-Rx-PE7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wul-It-ekV"/>
                     <connections>
                         <outlet property="articleTextView" destination="e5x-Pw-sAa" id="OGF-vm-MCG"/>
-                        <outlet property="nextButton" destination="WHZ-rd-ZEY" id="aGx-x6-yOG"/>
                         <outlet property="titleTextField" destination="jXs-zW-wVw" id="JPZ-O7-Sh2"/>
                         <outlet property="writingImageView" destination="V7L-f1-CXy" id="r7A-NE-KuX"/>
+                        <segue destination="1Qe-3s-Du2" kind="show" identifier="WritingAdd" id="Azq-p0-lrr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZK-wp-x9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -718,18 +706,18 @@ LadyBookは、
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3024.6376811594205" y="-1334.5982142857142"/>
+            <point key="canvasLocation" x="5753.6231884057979" y="-1334.5982142857142"/>
         </scene>
         <!--Writing Add View Controller-->
         <scene sceneID="nJZ-us-VJX">
             <objects>
-                <viewController storyboardIdentifier="WritingAdd" modalPresentationStyle="fullScreen" id="1Qe-3s-Du2" customClass="WritingAddViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WritingAdd" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Qe-3s-Du2" customClass="WritingAddViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5f-1G-ofj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jG-tE-mP1">
-                                <rect key="frame" x="157" y="456" width="100" height="50"/>
+                                <rect key="frame" x="157" y="488" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gTL-Pk-7ZM"/>
                                     <constraint firstAttribute="height" constant="50" id="oXQ-T8-f82"/>
@@ -743,7 +731,7 @@ LadyBookは、
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ej8-vY-8uN">
-                                <rect key="frame" x="157" y="546" width="100" height="50"/>
+                                <rect key="frame" x="157" y="578" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Bo1-mv-Sgm"/>
                                     <constraint firstAttribute="height" constant="50" id="HKn-Bt-CCw"/>
@@ -754,7 +742,7 @@ LadyBookは、
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Storyのカテゴリーを選んでください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zka-sQ-AbS">
-                                <rect key="frame" x="57" y="226" width="300" height="50"/>
+                                <rect key="frame" x="57" y="258" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LoK-ll-XKP"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="SNk-rz-c7W"/>
@@ -767,7 +755,7 @@ LadyBookは、
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Storyの投稿スタイルを選んでください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OUK-PB-oZH">
-                                <rect key="frame" x="57" y="326" width="300" height="50"/>
+                                <rect key="frame" x="57" y="358" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="Enw-GU-jNo"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="JiY-0c-gew"/>
@@ -784,6 +772,7 @@ LadyBookは、
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RX2-dp-ieH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="WritingAdd"/>
                         <constraints>
                             <constraint firstItem="9jG-tE-mP1" firstAttribute="top" secondItem="OUK-PB-oZH" secondAttribute="bottom" constant="80" id="6dJ-Ew-mE9"/>
                             <constraint firstItem="RX2-dp-ieH" firstAttribute="trailing" secondItem="zka-sQ-AbS" secondAttribute="trailing" constant="57" id="CrU-cf-0Eu"/>
@@ -807,11 +796,12 @@ LadyBookは、
                         <outlet property="draftButton" destination="Ej8-vY-8uN" id="EOR-2X-4Vv"/>
                         <outlet property="releaseButton" destination="9jG-tE-mP1" id="4dq-9E-65x"/>
                         <outlet property="styleTextField" destination="OUK-PB-oZH" id="dSP-2H-Kox"/>
+                        <segue destination="nQa-rI-mRy" kind="show" id="BS4-9k-gAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uz-7k-OlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4488.8000000000002" y="-1334.4827586206898"/>
+            <point key="canvasLocation" x="6613" y="-1335"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8Mv-xU-ZZn">
@@ -834,24 +824,24 @@ LadyBookは、
             </objects>
             <point key="canvasLocation" x="1070" y="104"/>
         </scene>
-        <!--Navigetion Controller-->
-        <scene sceneID="FY9-LW-7Wb">
+        <!--Navigation Controller-->
+        <scene sceneID="YRU-jc-adC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="c45-O6-Lzz" customClass="NavigetionController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8cb-Oa-kE6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="JDb-0M-EFB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S4l-bw-Cuc">
+                    <navigationItem key="navigationItem" id="Q9J-5n-lXv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DJm-H4-c9e">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="1Qe-3s-Du2" kind="relationship" relationship="rootViewController" id="S4I-7p-crj"/>
+                        <segue destination="M51-02-4yn" kind="relationship" relationship="rootViewController" id="BrL-XZ-fkz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-QB-SPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2E-pO-Kti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3756" y="-1334.4827586206898"/>
+            <point key="canvasLocation" x="4843.4782608695659" y="-1334.5982142857142"/>
         </scene>
     </scenes>
     <resources>
@@ -861,6 +851,7 @@ LadyBookは、
         <image name="Smile" width="1024" height="1024"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="image" width="512" height="512"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rogo" width="1000" height="1000"/>
