@@ -28,6 +28,7 @@
 		CED32DDD252B972400008776 /* Message3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED32DDC252B972400008776 /* Message3ViewController.swift */; };
 		CED66B0C2519D73700A52E4E /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED66B0B2519D73700A52E4E /* ArticleViewController.swift */; };
 		CEE449E62503275A009C572E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE449E52503275A009C572E /* MainViewController.swift */; };
+		CEF10996254BFA090083A2DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF10995254BFA090083A2DE /* LoginViewController.swift */; };
 		CEF8C7362520314300C8FC67 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C7352520314300C8FC67 /* PostData.swift */; };
 		CEF9404E251646BA000E032E /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9404D251646BA000E032E /* WritingViewController.swift */; };
 		CEF94051251713CF000E032E /* WritingAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF94050251713CF000E032E /* WritingAddViewController.swift */; };
@@ -61,6 +62,7 @@
 		CED32DDC252B972400008776 /* Message3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message3ViewController.swift; sourceTree = "<group>"; };
 		CED66B0B2519D73700A52E4E /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		CEE449E52503275A009C572E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CEF10995254BFA090083A2DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEF8C7352520314300C8FC67 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		CEF9404D251646BA000E032E /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		CEF94050251713CF000E032E /* WritingAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingAddViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				CED32DD9252B969A00008776 /* Message2ViewController.swift */,
 				CED32DDC252B972400008776 /* Message3ViewController.swift */,
 				CEE449E52503275A009C572E /* MainViewController.swift */,
+				CEF10995254BFA090083A2DE /* LoginViewController.swift */,
 				CE4D39A1250CAD4200FA6536 /* FirstViewController.swift */,
 				CEA23DFC2525A19200A50DBE /* SecondViewController.swift */,
 				CEA23DFF2525A22600A50DBE /* ThirdViewController.swift */,
@@ -316,6 +319,7 @@
 				CE07A3C325036B5D0046D7A5 /* UIViewconstraints.swift in Sources */,
 				CEFA01C3252861640060E9C6 /* ForthViewController.swift in Sources */,
 				CEA23DFD2525A19200A50DBE /* SecondViewController.swift in Sources */,
+				CEF10996254BFA090083A2DE /* LoginViewController.swift in Sources */,
 				CED66B0C2519D73700A52E4E /* ArticleViewController.swift in Sources */,
 				CEF94051251713CF000E032E /* WritingAddViewController.swift in Sources */,
 				CE2230B024FC6E7B00AFE3C7 /* ViewController.swift in Sources */,

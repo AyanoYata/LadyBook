@@ -10,7 +10,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     
     @IBOutlet weak var firstTableView: UITableView!
-    @IBOutlet weak var writtingButton: UIButton!
+    @IBOutlet weak var writingButton: UIButton!
     
     //空の配列にデータを追加していく
     var articles: [Article] = []
@@ -57,8 +57,13 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     }
     
     
-    @IBAction func tapWrittingButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "WritingView", sender: nil)
+    @IBAction func tapWritingButton(_ sender: Any) {
+        let nextvc = storyboard?.instantiateViewController(identifier: "LoginView") as! LoginViewController
+        navigationController?.pushViewController(nextvc, animated: true)
+        
+        print("------ self.navigationController ------")
+        print(self.navigationController)// navigetionControllerの中の初期値
+        print("------ self.navigationController ------")
     }
     
     
@@ -128,3 +133,4 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     }
     
 }
+

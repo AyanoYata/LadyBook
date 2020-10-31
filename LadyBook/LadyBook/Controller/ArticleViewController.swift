@@ -30,6 +30,10 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // NavigetionBarデフォルトのBackボタンを非表示にする
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        
         //  db.collection("Articles").document(articleId!).getDocumentで、articleIdのデータを取り出し表示する
         db.collection("Articles").document(articleId!).getDocument { (documentSnapshot, error) in
             if let error = error {
@@ -38,10 +42,12 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
             }
             
             if let documentSnapshot = documentSnapshot {
+                
                 let data = documentSnapshot.data()
                 
                 self.titleTextField.text = data?["title"] as? String
                 self.articleTextView.text = data?["text"] as? String
+                
                 //imageURLをwritingImageViewに反映させる
                 if let imageURL = data?["imageURL"] as? String {
                     Nuke.loadImage(with: URL(string: imageURL)!, into: self.writingImageView)
@@ -59,13 +65,14 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
             }
         }
         
-        // TabBar設置
+        // 下 TabBarを設置
         let width = self.view.frame.width
         let height = self.view.frame.height
         let tabBarHeight:CGFloat = 58
         
         
         myTabBar = MyTabBar()
+        //バーの枠組
         myTabBar.frame = CGRect(x:0,y:height - tabBarHeight,width:width,height:tabBarHeight)
         //バーの色
         myTabBar.barTintColor = UIColor.systemGray4
@@ -78,8 +85,8 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
         let config1:UITabBarItem = UITabBarItem(title: "Home", image: UIImage(named:"home.png"), tag: 1)
         let config2:UITabBarItem = UITabBarItem(title: "Search", image: UIImage(named:"search.png"), tag: 2)
         let config3:UITabBarItem = UITabBarItem(title: "Favorite", image: UIImage(named:"heart.png"), tag: 3)
-        let config4:UITabBarItem = UITabBarItem(title: "Mypage", image:
-                                                    UIImage(named:"person.png"), tag: 4)
+        let config4:UITabBarItem = UITabBarItem(title: "Mypage", image: UIImage(named:"person.png"), tag: 4)
+        
         //ボタンをタブバーに配置する
         myTabBar.items = [config1,config2,config3,config4]
         //デリゲートを設定する
@@ -92,22 +99,29 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
         myTabBar.unselectedItemTintColor = UIColor.white
         
         myTabBar.items = [config1,config2,config3,config4]
+        
+        
+        // 各Tabの動き
+        func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+            switch item.tag{
+            case 1:
+                let nextVC = storyboard?.instantiateViewController(identifier: "First")
+                self.present(nextVC!, animated: true, completion: nil)
+            
+            //case 2:
+                
+            //case 3:
+                
+            //case 4:
+                
+            
+            default : return
+                
+            }
+        }
+        
     }
     
-    // 各Tabの動き
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        switch item.tag{
-        case 1:
-            let nextVC = self.storyboard?.instantiateViewController(identifier: "First") as! FirstViewController
-            self.navigationController?.pushViewController(nextVC, animated: true)
-            
-        //case 2:
-        //case 3:
-        //case 4:
-        
-        default : return
-            
-        }
-    }
+   
 }
 

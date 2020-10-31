@@ -396,7 +396,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXf-av-HvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7445" y="-1335"/>
+            <point key="canvasLocation" x="6339" y="-1335"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="NjK-3e-8sa">
@@ -439,7 +439,7 @@ LadyBookは、
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eQE-DT-o67" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FCa-00-Ijd"/>
@@ -462,7 +462,7 @@ LadyBookは、
                                 </cells>
                             </collectionView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BL-DJ-CLq" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="685"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iEy-S3-ntw"/>
@@ -477,15 +477,16 @@ LadyBookは、
                             <constraint firstItem="iEy-S3-ntw" firstAttribute="bottom" secondItem="8BL-DJ-CLq" secondAttribute="bottom" id="mIV-oR-ozw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="ePs-mn-gWh"/>
+                    <navigationItem key="navigationItem" id="cc2-Tz-FsE"/>
                     <connections>
                         <outlet property="buttonBarView" destination="eQE-DT-o67" id="nb4-Om-xch"/>
                         <outlet property="containerView" destination="8BL-DJ-CLq" id="8wq-K5-tLi"/>
+                        <segue destination="Zea-EP-Gjb" kind="show" id="uFt-xz-Qxl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJG-yd-Ovn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013.0434782608697" y="-577.23214285714278"/>
+            <point key="canvasLocation" x="2923.1884057971015" y="-577.23214285714278"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="YS5-LM-FZb">
@@ -510,7 +511,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMb-i5-auW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5429" y="-577"/>
+            <point key="canvasLocation" x="6521.739130434783" y="-577.23214285714278"/>
         </scene>
         <!--Life-->
         <scene sceneID="EAf-Ln-47m">
@@ -535,7 +536,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khf-Px-spj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6193" y="-577"/>
+            <point key="canvasLocation" x="7247.826086956522" y="-577.23214285714278"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="mR7-xi-Gdb">
@@ -560,7 +561,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2m-Qe-Cc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6990" y="-577"/>
+            <point key="canvasLocation" x="7963.7681159420299" y="-577.23214285714278"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="ss3-zv-tKU">
@@ -585,22 +586,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRo-ID-tBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4643" y="-577"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5aZ-c0-QDZ">
-            <objects>
-                <viewController id="uzf-a9-mnf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oc8-zj-aOZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="rDR-UO-mcI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R40-ox-6D2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2935" y="-1349"/>
+            <point key="canvasLocation" x="5684.057971014493" y="-577.23214285714278"/>
         </scene>
         <!--FirstView Controller-->
         <scene sceneID="iXi-dr-hTM">
@@ -618,7 +604,7 @@ LadyBookは、
                                     <constraint firstAttribute="height" constant="818" id="s78-HI-TBB"/>
                                 </constraints>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNy-Zb-unX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNy-Zb-unX" userLabel="Writing Button">
                                 <rect key="frame" x="289" y="752" width="75" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="QWr-Lx-V8U"/>
@@ -626,8 +612,7 @@ LadyBookは、
                                 </constraints>
                                 <state key="normal" image="Book&amp;Pen"/>
                                 <connections>
-                                    <action selector="tapWrittingButton:" destination="Wvt-8U-2Qb" eventType="touchUpInside" id="wZh-wY-KZd"/>
-                                    <segue destination="8cb-Oa-kE6" kind="presentation" identifier="WritingView" modalPresentationStyle="fullScreen" id="9tF-qQ-DXP"/>
+                                    <action selector="tapWritingButton:" destination="Wvt-8U-2Qb" eventType="touchUpInside" id="SsF-zD-OO5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -643,19 +628,63 @@ LadyBookは、
                             <constraint firstItem="D1J-Gf-JQg" firstAttribute="top" secondItem="qne-oR-3Gp" secondAttribute="top" id="vmq-LA-42J"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JYg-bo-PeI"/>
                     <connections>
                         <outlet property="firstTableView" destination="D1J-Gf-JQg" id="MI5-kl-6bV"/>
-                        <outlet property="writtingButton" destination="QNy-Zb-unX" id="5Zl-hb-fZY"/>
+                        <outlet property="writingButton" destination="QNy-Zb-unX" id="xw5-HZ-NWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyj-9X-F16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3872" y="-577"/>
+            <point key="canvasLocation" x="4639.130434782609" y="-577.23214285714278"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="hSW-Hu-M2O">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zea-EP-Gjb" customClass="LoginViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LxD-1h-QlH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレスを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEa-TG-UqA">
+                                <rect key="frame" x="78" y="130" width="255" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワードを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IYu-V3-jLj">
+                                <rect key="frame" x="78" y="193" width="255" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMr-OV-Wpf">
+                                <rect key="frame" x="165" y="366" width="85" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="新規登録"/>
+                                <connections>
+                                    <action selector="tappedSignUpButton:" destination="Zea-EP-Gjb" eventType="touchUpInside" id="MZa-rX-K4G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OJI-gZ-Yv8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YLS-8H-fXM"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="hEa-TG-UqA" id="0aD-BN-PJu"/>
+                        <outlet property="passwordTextField" destination="IYu-V3-jLj" id="Vx1-Ut-K0k"/>
+                        <segue destination="M51-02-4yn" kind="show" id="qCc-cj-k4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgN-DN-e26" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3758" y="-1335"/>
         </scene>
         <!--Writing View Controller-->
         <scene sceneID="ZDt-Px-Uw9">
             <objects>
-                <viewController storyboardIdentifier="WritingView" id="M51-02-4yn" customClass="WritingViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WritingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M51-02-4yn" customClass="WritingViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDS-QL-p2h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -674,13 +703,11 @@ LadyBookは、
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-f1-CXy">
-                                <rect key="frame" x="137" y="177" width="140" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="dvz-Ye-T9a">
+                                <rect key="frame" x="22" y="148" width="370" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="380" id="PB3-AR-HbC"/>
-                                    <constraint firstAttribute="height" constant="130" id="nyx-7q-eqC"/>
+                                    <constraint firstAttribute="height" constant="130" id="UBg-Ar-aM2"/>
+                                    <constraint firstAttribute="width" constant="370" id="tsY-aq-obH"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -688,25 +715,26 @@ LadyBookは、
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="WritingView"/>
                         <constraints>
-                            <constraint firstItem="V7L-f1-CXy" firstAttribute="centerX" secondItem="iDS-QL-p2h" secondAttribute="centerX" id="Zae-6R-GQW"/>
+                            <constraint firstItem="dvz-Ye-T9a" firstAttribute="top" secondItem="GV9-VY-NpT" secondAttribute="top" constant="60" id="ZHc-Ta-Yh6"/>
+                            <constraint firstItem="dvz-Ye-T9a" firstAttribute="centerX" secondItem="iDS-QL-p2h" secondAttribute="centerX" id="ZnJ-9U-Wv4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wul-It-ekV"/>
                     <connections>
                         <outlet property="articleTextView" destination="e5x-Pw-sAa" id="OGF-vm-MCG"/>
                         <outlet property="titleTextField" destination="jXs-zW-wVw" id="JPZ-O7-Sh2"/>
-                        <outlet property="writingImageView" destination="V7L-f1-CXy" id="r7A-NE-KuX"/>
+                        <outlet property="writingImageView" destination="dvz-Ye-T9a" id="TAt-yn-X5U"/>
                         <segue destination="1Qe-3s-Du2" kind="show" identifier="WritingAdd" id="Azq-p0-lrr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZK-wp-x9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="a9h-J1-C76" userLabel="tap Gesture Recognizer">
                     <connections>
-                        <action selector="tapImageView:" destination="M51-02-4yn" id="mcC-ES-iMy"/>
+                        <action selector="tapImageView:" destination="M51-02-4yn" id="1TR-ke-cg3"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5753.6231884057979" y="-1334.5982142857142"/>
+            <point key="canvasLocation" x="4528" y="-1335"/>
         </scene>
         <!--Writing Add View Controller-->
         <scene sceneID="nJZ-us-VJX">
@@ -801,7 +829,7 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uz-7k-OlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6613" y="-1335"/>
+            <point key="canvasLocation" x="5454" y="-1335"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8Mv-xU-ZZn">
@@ -814,7 +842,7 @@ LadyBookは、
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gJ9-UI-ezj" kind="relationship" relationship="viewControllers" id="f41-Gp-Vmp"/>
+                        <segue destination="CG8-dQ-MTc" kind="relationship" relationship="viewControllers" id="f41-Gp-Vmp"/>
                         <segue destination="d7K-Nz-5Oi" kind="relationship" relationship="viewControllers" id="qCi-Mt-wnj"/>
                         <segue destination="Ky9-7k-chH" kind="relationship" relationship="viewControllers" id="4gM-Kf-x5r"/>
                         <segue destination="d5N-YW-6kv" kind="relationship" relationship="viewControllers" id="lMa-iC-mCx"/>
@@ -824,24 +852,24 @@ LadyBookは、
             </objects>
             <point key="canvasLocation" x="1070" y="104"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="YRU-jc-adC">
+        <!--Home-->
+        <scene sceneID="mHb-ah-RSy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8cb-Oa-kE6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CG8-dQ-MTc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="ePs-mn-gWh"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Q9J-5n-lXv"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DJm-H4-c9e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oQJ-sz-r8c">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="M51-02-4yn" kind="relationship" relationship="rootViewController" id="BrL-XZ-fkz"/>
+                        <segue destination="gJ9-UI-ezj" kind="relationship" relationship="rootViewController" id="DYg-KC-skg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2E-pO-Kti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wv-Ih-geX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4843.4782608695659" y="-1334.5982142857142"/>
+            <point key="canvasLocation" x="2013.0434782608697" y="-577.23214285714278"/>
         </scene>
     </scenes>
     <resources>
