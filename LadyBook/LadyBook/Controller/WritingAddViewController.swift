@@ -33,7 +33,7 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var draftButton: UIButton!
     
     
-    var titleTextField =  UITextField()
+    var titleTextView =  UITextView()
     var articleTextView = UITextView()
     var writingImageView = UIImageView()
     
@@ -139,7 +139,8 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // articleIDに割り振るランダムな文字列を生成
         let articleId = db.collection("Articles").document().documentID
         //  articleIdを使ってArticleのインスタンスを作成
-        let article = Article(articleId: articleId, title: title, text: articleTextView.text, createdAt: Timestamp())
+        #warning(" なぜ titleには「！」をつけないのか ")
+        let article = Article(articleId: articleId, title: titleTextView.text!, text: articleTextView.text!, createdAt: Timestamp(), category: categoryTextField.text!, style: styleTextField.text!)
         //  Firestoreには、[String:Any]型で記録する
         do{
             var encodedArticle:[String:Any] = try Firestore.Encoder().encode(article)
@@ -167,7 +168,7 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
     // FireStoreへ書き込み(StorageにてimageのURLをString型で取得し → 次画面に値を渡し遷移する)
     @IBAction func tapReleaseButton(_ sender: Any) {
         print("⭐️公開ボタンを押しました")
-        guard let title = titleTextField.text else {
+        guard let title = titleTextView.text else {
             return
         }
         //タイトルが空白の時のエラー処理

@@ -16,8 +16,8 @@
 		CE2230B324FC6E7B00AFE3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B124FC6E7B00AFE3C7 /* Main.storyboard */; };
 		CE2230B524FC6E7D00AFE3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */; };
 		CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2230B624FC6E7D00AFE3C7 /* LaunchScreen.storyboard */; };
-		CE2230C524FD280700AFE3C7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230C324FD280700AFE3C7 /* CustomCell.swift */; };
-		CE2230C624FD280700AFE3C7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* CustomCell.xib */; };
+		CE2230C524FD280700AFE3C7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2230C324FD280700AFE3C7 /* TableViewCell.swift */; };
+		CE2230C624FD280700AFE3C7 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2230C424FD280700AFE3C7 /* TableViewCell.xib */; };
 		CE2CEA1725085AE0003B7D98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */; };
 		CE4D39A3250CAD4200FA6536 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D39A1250CAD4200FA6536 /* FirstViewController.swift */; };
 		CE6190D2252F26D400209EDF /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6190D1252F26D400209EDF /* MyTabBar.swift */; };
@@ -49,8 +49,8 @@
 		CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2230B724FC6E7D00AFE3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2230B924FC6E7D00AFE3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE2230C324FD280700AFE3C7 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		CE2230C424FD280700AFE3C7 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		CE2230C324FD280700AFE3C7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CE2230C424FD280700AFE3C7 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		CE2CEA1625085AE0003B7D98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE457FD1E32B289BAE5DB8EF /* Pods-LadyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LadyBook.release.xcconfig"; path = "Target Support Files/Pods-LadyBook/Pods-LadyBook.release.xcconfig"; sourceTree = "<group>"; };
 		CE4D39A1250CAD4200FA6536 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2230B124FC6E7B00AFE3C7 /* Main.storyboard */,
-				CE2230C424FD280700AFE3C7 /* CustomCell.xib */,
+				CE2230C424FD280700AFE3C7 /* TableViewCell.xib */,
 				CE2230B424FC6E7D00AFE3C7 /* Assets.xcassets */,
 			);
 			path = View;
@@ -162,7 +162,7 @@
 		CE2230C124FC6ED800AFE3C7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE2230C324FD280700AFE3C7 /* CustomCell.swift */,
+				CE2230C324FD280700AFE3C7 /* TableViewCell.swift */,
 				CE2230AF24FC6E7B00AFE3C7 /* ViewController.swift */,
 				CEFA01FF252868840060E9C6 /* Message1ViewController.swift */,
 				CED32DD9252B969A00008776 /* Message2ViewController.swift */,
@@ -253,7 +253,7 @@
 			files = (
 				CE2230B824FC6E7D00AFE3C7 /* LaunchScreen.storyboard in Resources */,
 				CE2230B524FC6E7D00AFE3C7 /* Assets.xcassets in Resources */,
-				CE2230C624FD280700AFE3C7 /* CustomCell.xib in Resources */,
+				CE2230C624FD280700AFE3C7 /* TableViewCell.xib in Resources */,
 				CE2230B324FC6E7B00AFE3C7 /* Main.storyboard in Resources */,
 				CE2CEA1725085AE0003B7D98 /* GoogleService-Info.plist in Resources */,
 			);
@@ -327,7 +327,7 @@
 				CEA23E002525A22600A50DBE /* ThirdViewController.swift in Sources */,
 				CEFA0200252868840060E9C6 /* Message1ViewController.swift in Sources */,
 				CE2230AC24FC6E7B00AFE3C7 /* AppDelegate.swift in Sources */,
-				CE2230C524FD280700AFE3C7 /* CustomCell.swift in Sources */,
+				CE2230C524FD280700AFE3C7 /* TableViewCell.swift in Sources */,
 				CE2230AE24FC6E7B00AFE3C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

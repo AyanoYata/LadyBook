@@ -3,7 +3,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 
-class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class WritingViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
 
     
@@ -16,8 +16,13 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     
     @IBOutlet weak var writingImageView: UIImageView!
-    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var titleTextView: UITextView!
+    
     @IBOutlet weak var articleTextView: UITextView!
+    
+    
+   
 
     
     
@@ -27,7 +32,7 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         // TapGestureRecognizerをTapした時にアクションを発動
         writingImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapImageView(_:))))
         
-        self.titleTextField.delegate = self
+        self.titleTextView.delegate = self
         self.articleTextView.delegate = self
         
         
@@ -40,6 +45,16 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         // ボタンをViewに反映
         self.navigationItem.rightBarButtonItems = [editBarButtonItem1]
         
+        
+        titleTextView.layer.borderColor = UIColor.systemGray5.cgColor  //　色
+        titleTextView.layer.borderWidth = 1.0 //線の幅
+        titleTextView.layer.cornerRadius = 10.0  // 枠を角丸にする
+        titleTextView.layer.masksToBounds = true
+        
+        
+        
+        
+        
         // TextViewに枠線をつける
         articleTextView.layer.borderColor = UIColor.systemGray5.cgColor  //　色
         articleTextView.layer.borderWidth = 1.0 //線の幅
@@ -51,7 +66,7 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @objc func editBarButton1Tapped(_ sender: UIBarButtonItem) {
 
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WritingAdd") as! WritingAddViewController
-        nextVC.titleTextField = titleTextField
+        nextVC.titleTextView = titleTextView
         nextVC.articleTextView = articleTextView
         nextVC.writingImageView = writingImageView
         self.navigationController?.pushViewController(nextVC, animated: true)
@@ -120,14 +135,7 @@ class WritingViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             return false
         }
     
-    // StoryのKeyboardもreturnkeyで閉じる
-    func articleTextViewShouldReturn(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
-            articleTextView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
+   
 
 
 }

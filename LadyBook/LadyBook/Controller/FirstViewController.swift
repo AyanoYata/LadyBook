@@ -29,18 +29,16 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         firstTableView.delegate = self
         firstTableView.dataSource = self
         
-        firstTableView.rowHeight = UITableView.automaticDimension   // automaticDimension・自動寸法
-        firstTableView.estimatedRowHeight = UITableView.automaticDimension // estimatedRowHeight・推定行高
+        //firstTableView.rowHeight = UITableView.automaticDimension   // automaticDimension・自動寸法
+        //firstTableView.estimatedRowHeight = UITableView.automaticDimension // estimatedRowHeight・推定行高
         
-        //CustomeCellの登録
-        let nib = UINib(nibName: "CustomCell", bundle: nil)
-        firstTableView.register(nib, forCellReuseIdentifier: "CustomCell") // register・登録
-        
+    
         readArticlesFromFirestore()
+        
+        configureTableViewCell()
     }
-    
-    
-    
+
+        
     //XLPagerTabStripに必須
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Top")
@@ -65,7 +63,17 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         print(self.navigationController)// navigetionControllerの中の初期値
         print("------ self.navigationController ------")
     }
+
     
+    // TableViewCellを読み込む関数
+    func configureTableViewCell() {
+        // TableViewCellのクラス名を指定してNibを作成
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
+        // Xibに設定したidentifier
+        let cellID = "CustomCell"
+        // TableViewCellにcellのIdentifierを指定して登録
+        firstTableView.register(nib, forCellReuseIdentifier: cellID)
+    }
     
     //tableViewのrowの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,11 +83,11 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     //tableViewのCellに表示する内容を返す(indexPathの個数だけ呼ばれる)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! TableViewCell
         
         if articles.isEmpty == false {
             cell.titleLabel?.text = articles[indexPath.row].title
-            cell.textField?.text = articles[indexPath.row].text
+            cell.articleLabel?.text = articles[indexPath.row].text
             // Nukeで画像を表示させる
             print(articles[indexPath.row].imageURL)
             //_ = Nuke.loadImage(with: getDownloadUrlStr, into: self.writingImageView)
@@ -93,7 +101,6 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt:", indexPath)
         let vc = ArticleViewController()
-        // 画面遷移
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -122,8 +129,10 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
                     if let title = data["title"] as? String,
                        let text = data["text"] as? String,
                        let imageURL = data["imageURL"] as? String,
+                       let category = data["category"] as? String,
+                       let style = data["style"] as? String,
                        let createdAt = data["createdAt"] as? Timestamp {
-                        self.articles.append(Article(articleId: document.documentID, title: title, text: text, createdAt: createdAt))
+                        self.articles.append(Article(articleId: document.documentID, title: title, text: text, createdAt: createdAt, category:category, style: style))
                     }
                     
                     self.firstTableView.reloadData()

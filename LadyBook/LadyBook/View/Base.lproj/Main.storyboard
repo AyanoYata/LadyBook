@@ -340,63 +340,57 @@ LadyBookは、
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duk-Dh-QdM">
-                                <rect key="frame" x="20" y="405" width="374" height="457"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIz-Bk-Zix">
-                                <rect key="frame" x="20" y="345" width="100" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNV-Rt-azJ">
-                                <rect key="frame" x="128" y="345" width="100" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfF-J6-ivI">
-                                <rect key="frame" x="20" y="300" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBr-EL-xFl">
-                                <rect key="frame" x="0.0" y="104" width="414" height="188"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBr-EL-xFl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="232"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="jBr-EL-xFl" secondAttribute="height" multiplier="11:5" id="dMc-hv-zmL"/>
+                                    <constraint firstAttribute="width" secondItem="jBr-EL-xFl" secondAttribute="height" multiplier="394:221" id="EIW-pY-O7L"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8E-rj-fDB">
+                                <rect key="frame" x="10" y="330" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7v-OV-Fa2">
+                                <rect key="frame" x="10" y="360" width="394" height="453"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bdn-S4-lK7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="86s-tp-rCH"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prZ-s0-YM9">
+                                <rect key="frame" x="10" y="360.5" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4jx-cK-ini"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="AricleView"/>
                         <constraints>
-                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="jBr-EL-xFl" secondAttribute="trailing" id="1wp-Sp-dcb"/>
-                            <constraint firstItem="jBr-EL-xFl" firstAttribute="top" secondItem="4jx-cK-ini" secondAttribute="top" id="DNc-nA-FiE"/>
-                            <constraint firstItem="jBr-EL-xFl" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" id="UXe-5b-6LT"/>
+                            <constraint firstItem="jBr-EL-xFl" firstAttribute="top" secondItem="4jx-cK-ini" secondAttribute="top" id="22i-th-Gko"/>
+                            <constraint firstItem="l8E-rj-fDB" firstAttribute="top" secondItem="jBr-EL-xFl" secondAttribute="bottom" constant="10" id="5KJ-VA-l6F"/>
+                            <constraint firstItem="prZ-s0-YM9" firstAttribute="top" secondItem="l8E-rj-fDB" secondAttribute="bottom" constant="10" id="Mnh-YV-Ve5"/>
+                            <constraint firstItem="jBr-EL-xFl" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" id="NZU-uh-qY3"/>
+                            <constraint firstItem="l8E-rj-fDB" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" constant="10" id="on7-wg-2Gn"/>
+                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="jBr-EL-xFl" secondAttribute="trailing" id="qTH-qD-wQP"/>
+                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="l8E-rj-fDB" secondAttribute="trailing" constant="10" id="r7c-YR-6W3"/>
+                            <constraint firstItem="prZ-s0-YM9" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" constant="10" id="vBW-bn-yT1"/>
+                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="prZ-s0-YM9" secondAttribute="trailing" constant="10" id="wRh-8z-tCf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LBa-pJ-41J"/>
                     <connections>
-                        <outlet property="articleTextView" destination="duk-Dh-QdM" id="yiI-ac-GVR"/>
-                        <outlet property="categoryLabel" destination="rIz-Bk-Zix" id="YUW-w6-AeE"/>
-                        <outlet property="imageRateLayoutConstraint" destination="dMc-hv-zmL" id="SYY-CX-iF3"/>
-                        <outlet property="styleLabel" destination="mNV-Rt-azJ" id="WTQ-pp-JCu"/>
-                        <outlet property="titleTextField" destination="gfF-J6-ivI" id="egJ-Ji-xGZ"/>
+                        <outlet property="articleLabel" destination="prZ-s0-YM9" id="IkW-o8-44r"/>
+                        <outlet property="imageRateLayoutConstraint" destination="EIW-pY-O7L" id="23u-BB-KN9"/>
+                        <outlet property="titleLabel" destination="l8E-rj-fDB" id="H0F-yM-rQ4"/>
                         <outlet property="writingImageView" destination="jBr-EL-xFl" id="8VH-BJ-EHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXf-av-HvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6339" y="-1335"/>
+            <point key="canvasLocation" x="6337.68115942029" y="-1335.2678571428571"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="NjK-3e-8sa">
@@ -566,7 +560,7 @@ LadyBookは、
         <!--Second View Controller-->
         <scene sceneID="ss3-zv-tKU">
             <objects>
-                <viewController storyboardIdentifier="Second" id="tUY-CS-emL" customClass="SecondViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Second" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tUY-CS-emL" customClass="SecondViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aXT-e2-TdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -591,12 +585,12 @@ LadyBookは、
         <!--FirstView Controller-->
         <scene sceneID="iXi-dr-hTM">
             <objects>
-                <viewController storyboardIdentifier="First" modalPresentationStyle="fullScreen" id="Wvt-8U-2Qb" userLabel="FirstView Controller" customClass="FirstViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="First" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wvt-8U-2Qb" userLabel="FirstView Controller" customClass="FirstViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="First" id="dQF-CY-xp3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D1J-Gf-JQg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D1J-Gf-JQg" customClass="F">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -689,40 +683,35 @@ LadyBookは、
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXs-zW-wVw">
-                                <rect key="frame" x="16" y="344" width="378" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e5x-Pw-sAa">
-                                <rect key="frame" x="20" y="455" width="374" height="407"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jRn-9h-R6C">
+                                <rect key="frame" x="20" y="282" width="370" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="dvz-Ye-T9a">
-                                <rect key="frame" x="22" y="148" width="370" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="UBg-Ar-aM2"/>
-                                    <constraint firstAttribute="width" constant="370" id="tsY-aq-obH"/>
-                                </constraints>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mTI-Q2-CTY">
+                                <rect key="frame" x="22" y="409" width="370" height="315"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="dvz-Ye-T9a">
+                                <rect key="frame" x="22" y="109" width="368" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GV9-VY-NpT"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="WritingView"/>
-                        <constraints>
-                            <constraint firstItem="dvz-Ye-T9a" firstAttribute="top" secondItem="GV9-VY-NpT" secondAttribute="top" constant="60" id="ZHc-Ta-Yh6"/>
-                            <constraint firstItem="dvz-Ye-T9a" firstAttribute="centerX" secondItem="iDS-QL-p2h" secondAttribute="centerX" id="ZnJ-9U-Wv4"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wul-It-ekV"/>
                     <connections>
-                        <outlet property="articleTextView" destination="e5x-Pw-sAa" id="OGF-vm-MCG"/>
-                        <outlet property="titleTextField" destination="jXs-zW-wVw" id="JPZ-O7-Sh2"/>
+                        <outlet property="articleTextView" destination="mTI-Q2-CTY" id="wz4-ac-BQE"/>
+                        <outlet property="titleTextView" destination="jRn-9h-R6C" id="M2P-XN-Xyr"/>
                         <outlet property="writingImageView" destination="dvz-Ye-T9a" id="TAt-yn-X5U"/>
                         <segue destination="1Qe-3s-Du2" kind="show" identifier="WritingAdd" id="Azq-p0-lrr"/>
                     </connections>
@@ -734,7 +723,7 @@ LadyBookは、
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4528" y="-1335"/>
+            <point key="canvasLocation" x="4527.536231884058" y="-1335.2678571428571"/>
         </scene>
         <!--Writing Add View Controller-->
         <scene sceneID="nJZ-us-VJX">

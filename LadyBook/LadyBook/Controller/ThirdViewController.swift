@@ -27,7 +27,7 @@ class ThirdViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         thirdTableView.delegate = self
         thirdTableView.dataSource = self
         //CustomeCellの登録
-        let nib = UINib(nibName: "CustomCell", bundle: nil)
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
         thirdTableView.register(nib, forCellReuseIdentifier: "CustomCell")
         
     }
@@ -47,6 +47,17 @@ class ThirdViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         }
     
     
+    // TableViewCellを読み込む関数
+    func configureTableViewCell() {
+        // TableViewCellのクラス名を指定してNibを作成
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
+        // Xibに設定したidentifier
+        let cellID = "CustomCell"
+        // TableViewCellにcellのIdentifierを指定して登録
+        thirdTableView.register(nib, forCellReuseIdentifier: cellID)
+    }
+    
+    
     //tableViewのrowの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
@@ -55,7 +66,7 @@ class ThirdViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     //tableViewのCellに表示する内容を返す(indexPathの個数だけ呼ばれる)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! TableViewCell
         if articles.isEmpty == false {
         cell.titleLabel?.text = articles[indexPath.row].title
         }

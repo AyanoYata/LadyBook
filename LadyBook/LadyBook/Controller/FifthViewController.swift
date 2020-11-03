@@ -28,7 +28,7 @@ class FifthViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         fifthTableView.delegate = self
         fifthTableView.dataSource = self
         //CustomeCellの登録
-        let nib = UINib(nibName: "CustomCell", bundle: nil)
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
         fifthTableView.register(nib, forCellReuseIdentifier: "CustomCell")
         
     }
@@ -36,6 +36,16 @@ class FifthViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     //XLPagerTabStripに必須
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Life")
+    }
+    
+    // TableViewCellを読み込む関数
+    func configureTableViewCell() {
+        // TableViewCellのクラス名を指定してNibを作成
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
+        // Xibに設定したidentifier
+        let cellID = "CustomCell"
+        // TableViewCellにcellのIdentifierを指定して登録
+        fifthTableView.register(nib, forCellReuseIdentifier: cellID)
     }
     
     //tableViewのrowの数を返す
@@ -46,7 +56,7 @@ class FifthViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     //tableViewのCellに表示する内容を返す(indexPathの個数だけ呼ばれる)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! TableViewCell
         if articles.isEmpty == false {
         cell.titleLabel?.text = articles[indexPath.row].title
         }

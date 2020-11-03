@@ -1,11 +1,12 @@
 import UIKit
 
-class CustomCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var imegeView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var articleLabel: UILabel!
+    
     //@IBOutlet weak var Category: UILabel!
     //@IBOutlet weak var Style: UILabel!
     

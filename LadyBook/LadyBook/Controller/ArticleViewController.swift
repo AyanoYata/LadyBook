@@ -19,12 +19,17 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
     private var myTabBar:MyTabBar!
     
     @IBOutlet weak var writingImageView: UIImageView!
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var articleTextView: UITextView!
     
     
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var styleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var articleLabel: UILabel!
+    //@IBOutlet weak var titleTextField: UITextField!
+    //@IBOutlet weak var articleTextView: UITextView!
+    
+    
+   
+   // @IBOutlet weak var selectedCategoryTextField: UITextField!
+    //@IBOutlet weak var selectedStyleTextField: UITextField!
     @IBOutlet weak var imageRateLayoutConstraint: NSLayoutConstraint!
     
     
@@ -45,8 +50,10 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
                 
                 let data = documentSnapshot.data()
                 
-                self.titleTextField.text = data?["title"] as? String
-                self.articleTextView.text = data?["text"] as? String
+                self.titleLabel.text = data?["title"] as? String
+                self.articleLabel.text = data?["text"] as? String
+                //self.selectedCategoryTextField.text = data?["category"] as? String
+                //self.selectedStyleTextField.text = data?["style"] as? String
                 
                 //imageURLをwritingImageViewに反映させる
                 if let imageURL = data?["imageURL"] as? String {
