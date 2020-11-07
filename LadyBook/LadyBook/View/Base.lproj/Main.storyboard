@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rogo" translatesAutoresizingMaskIntoConstraints="NO" id="2uh-M3-hKY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topRogo" translatesAutoresizingMaskIntoConstraints="NO" id="2uh-M3-hKY">
                                 <rect key="frame" x="32" y="194" width="350" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2uh-M3-hKY" secondAttribute="height" multiplier="1:1" id="CYk-JE-w6S"/>
@@ -122,7 +122,7 @@ LadyBookを開いていただき
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9uc-b0-Q5S" kind="presentation" identifier="Message2" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="IGp-ha-fq9"/>
+                                    <segue destination="9uc-b0-Q5S" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="TUe-QK-WQ4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -332,60 +332,81 @@ LadyBookは、
             </objects>
             <point key="canvasLocation" x="2923.1884057971015" y="102.45535714285714"/>
         </scene>
-        <!--Article View Controller-->
+        <!--ArticleViewController-->
         <scene sceneID="YKs-Nn-QU4">
             <objects>
-                <viewController storyboardIdentifier="ArticleView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nQa-rI-mRy" customClass="ArticleViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleView" title="ArticleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nQa-rI-mRy" customClass="ArticleViewController" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMX-2Z-kJV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBr-EL-xFl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="232"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ely-3c-Nli">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8F7-cY-dry">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="323.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ac-Nl-jQq">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1Ac-Nl-jQq" secondAttribute="height" multiplier="16:9" id="knH-pZ-pTV"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-xv-ftf">
+                                                <rect key="frame" x="10" y="263" width="394" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yS-nU-k5g">
+                                                <rect key="frame" x="10" y="293" width="394" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Pij-xv-ftf" firstAttribute="top" secondItem="1Ac-Nl-jQq" secondAttribute="bottom" constant="30" id="1tA-bA-BdZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="2yS-nU-k5g" secondAttribute="bottom" constant="10" id="4Il-kY-C04"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pij-xv-ftf" secondAttribute="trailing" constant="10" id="CbE-2c-RZb"/>
+                                            <constraint firstAttribute="trailing" secondItem="2yS-nU-k5g" secondAttribute="trailing" constant="10" id="LkH-Vf-4ie"/>
+                                            <constraint firstItem="2yS-nU-k5g" firstAttribute="leading" secondItem="8F7-cY-dry" secondAttribute="leading" constant="10" id="M2t-85-s8Q"/>
+                                            <constraint firstItem="Pij-xv-ftf" firstAttribute="leading" secondItem="8F7-cY-dry" secondAttribute="leading" constant="10" id="Qxr-hK-ZFS"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Ac-Nl-jQq" secondAttribute="trailing" id="XQ2-PC-ao9"/>
+                                            <constraint firstItem="1Ac-Nl-jQq" firstAttribute="top" secondItem="8F7-cY-dry" secondAttribute="top" id="eCL-pD-094"/>
+                                            <constraint firstItem="1Ac-Nl-jQq" firstAttribute="leading" secondItem="8F7-cY-dry" secondAttribute="leading" id="kt1-wA-dby"/>
+                                            <constraint firstItem="2yS-nU-k5g" firstAttribute="top" secondItem="Pij-xv-ftf" secondAttribute="bottom" constant="30" id="uYX-GP-3Bn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="jBr-EL-xFl" secondAttribute="height" multiplier="394:221" id="EIW-pY-O7L"/>
+                                    <constraint firstItem="8F7-cY-dry" firstAttribute="top" secondItem="Ely-3c-Nli" secondAttribute="top" id="0sQ-vn-p72"/>
+                                    <constraint firstItem="8F7-cY-dry" firstAttribute="width" secondItem="Ely-3c-Nli" secondAttribute="width" id="C26-Rl-8p1"/>
+                                    <constraint firstAttribute="bottom" secondItem="8F7-cY-dry" secondAttribute="bottom" id="Ck7-UX-fek"/>
+                                    <constraint firstAttribute="trailing" secondItem="8F7-cY-dry" secondAttribute="trailing" id="PrL-WX-NVn"/>
+                                    <constraint firstItem="8F7-cY-dry" firstAttribute="leading" secondItem="Ely-3c-Nli" secondAttribute="leading" id="cXi-ZW-MWT"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8E-rj-fDB">
-                                <rect key="frame" x="10" y="330" width="394" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7v-OV-Fa2">
-                                <rect key="frame" x="10" y="360" width="394" height="453"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="bdn-S4-lK7"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="86s-tp-rCH"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="cPk-Em-O7X"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fGy-H9-d6Z"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prZ-s0-YM9">
-                                <rect key="frame" x="10" y="360.5" width="394" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4jx-cK-ini"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="AricleView"/>
                         <constraints>
-                            <constraint firstItem="jBr-EL-xFl" firstAttribute="top" secondItem="4jx-cK-ini" secondAttribute="top" id="22i-th-Gko"/>
-                            <constraint firstItem="l8E-rj-fDB" firstAttribute="top" secondItem="jBr-EL-xFl" secondAttribute="bottom" constant="10" id="5KJ-VA-l6F"/>
-                            <constraint firstItem="prZ-s0-YM9" firstAttribute="top" secondItem="l8E-rj-fDB" secondAttribute="bottom" constant="10" id="Mnh-YV-Ve5"/>
-                            <constraint firstItem="jBr-EL-xFl" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" id="NZU-uh-qY3"/>
-                            <constraint firstItem="l8E-rj-fDB" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" constant="10" id="on7-wg-2Gn"/>
-                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="jBr-EL-xFl" secondAttribute="trailing" id="qTH-qD-wQP"/>
-                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="l8E-rj-fDB" secondAttribute="trailing" constant="10" id="r7c-YR-6W3"/>
-                            <constraint firstItem="prZ-s0-YM9" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" constant="10" id="vBW-bn-yT1"/>
-                            <constraint firstItem="4jx-cK-ini" firstAttribute="trailing" secondItem="prZ-s0-YM9" secondAttribute="trailing" constant="10" id="wRh-8z-tCf"/>
+                            <constraint firstItem="Ely-3c-Nli" firstAttribute="trailing" secondItem="4jx-cK-ini" secondAttribute="trailing" id="98m-no-kan"/>
+                            <constraint firstItem="Ely-3c-Nli" firstAttribute="bottom" secondItem="4jx-cK-ini" secondAttribute="bottom" id="KcD-nJ-r6W"/>
+                            <constraint firstItem="Ely-3c-Nli" firstAttribute="top" secondItem="4jx-cK-ini" secondAttribute="top" id="WO6-ww-h5m"/>
+                            <constraint firstItem="Ely-3c-Nli" firstAttribute="leading" secondItem="4jx-cK-ini" secondAttribute="leading" id="ejg-cC-hQX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LBa-pJ-41J"/>
                     <connections>
-                        <outlet property="articleLabel" destination="prZ-s0-YM9" id="IkW-o8-44r"/>
-                        <outlet property="imageRateLayoutConstraint" destination="EIW-pY-O7L" id="23u-BB-KN9"/>
-                        <outlet property="titleLabel" destination="l8E-rj-fDB" id="H0F-yM-rQ4"/>
-                        <outlet property="writingImageView" destination="jBr-EL-xFl" id="8VH-BJ-EHW"/>
+                        <outlet property="articleLabel" destination="2yS-nU-k5g" id="AKb-QJ-Ue3"/>
+                        <outlet property="imageRateLayoutConstraint" destination="knH-pZ-pTV" id="Jm5-Nm-1ym"/>
+                        <outlet property="titleLabel" destination="Pij-xv-ftf" id="cYD-om-ks1"/>
+                        <outlet property="writingImageView" destination="1Ac-Nl-jQq" id="iIm-cf-aQR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXf-av-HvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -630,7 +651,38 @@ LadyBookは、
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyj-9X-F16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4639.130434782609" y="-577.23214285714278"/>
+            <point key="canvasLocation" x="4071" y="-577"/>
+        </scene>
+        <!--First View2 Controller-->
+        <scene sceneID="IdE-zb-LFF">
+            <objects>
+                <viewController storyboardIdentifier="First2" id="SHp-Oc-Vdz" customClass="FirstView2Controller" customModule="LadyBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oqQ-pZ-abz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="06V-cA-aul">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dtd-be-qBN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="First2"/>
+                        <constraints>
+                            <constraint firstItem="dtd-be-qBN" firstAttribute="trailing" secondItem="06V-cA-aul" secondAttribute="trailing" id="DJE-cr-OYl"/>
+                            <constraint firstItem="06V-cA-aul" firstAttribute="top" secondItem="dtd-be-qBN" secondAttribute="top" id="Kjc-B8-DTy"/>
+                            <constraint firstItem="06V-cA-aul" firstAttribute="leading" secondItem="dtd-be-qBN" secondAttribute="leading" id="TTr-vm-Xbu"/>
+                            <constraint firstItem="06V-cA-aul" firstAttribute="bottom" secondItem="dtd-be-qBN" secondAttribute="bottom" id="iVU-RU-3Ar"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="first2TableView" destination="06V-cA-aul" id="ZYG-AG-pYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N5u-So-8Vm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4921.739130434783" y="-577.23214285714278"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hSW-Hu-M2O">
@@ -871,7 +923,7 @@ LadyBookは、
         <image name="image" width="512" height="512"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="rogo" width="1000" height="1000"/>
+        <image name="topRogo" width="300" height="300"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

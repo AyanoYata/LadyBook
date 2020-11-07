@@ -140,7 +140,8 @@ class WritingAddViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let articleId = db.collection("Articles").document().documentID
         //  articleIdを使ってArticleのインスタンスを作成
         #warning(" なぜ titleには「！」をつけないのか ")
-        let article = Article(articleId: articleId, title: titleTextView.text!, text: articleTextView.text!, createdAt: Timestamp(), category: categoryTextField.text!, style: styleTextField.text!)
+        let article = Article(articleId: articleId, title: titleTextView.text!, createdAt: Timestamp())
+        //let article = Article(articleId: articleId, title: titleTextView.text!, text: articleTextView.text!, createdAt: Timestamp(), category: categoryTextField.text!, style: styleTextField.text!)
         //  Firestoreには、[String:Any]型で記録する
         do{
             var encodedArticle:[String:Any] = try Firestore.Encoder().encode(article)

@@ -2,46 +2,46 @@ import UIKit
 import XLPagerTabStrip
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-import Nuke
+//import Nuke
 
-
-class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
+class FirstView2Controller: UIViewController, IndicatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
     
     
-    
-    @IBOutlet weak var firstTableView: UITableView!
-    @IBOutlet weak var writingButton: UIButton!
+    @IBOutlet weak var first2TableView: UITableView!
     
     //空の配列にデータを追加していく
     var articles: [Article] = []
-    var postDatas: [PostData] = []
+    //var postDatas: [PostData] = []
+    
     
     //FirestoreのDBのインスタンスを作成
     let db = Firestore.firestore()
     
+    
     // 上タブのタイトルボタン　 Indicator・表示版
-    var itemInfo: IndicatorInfo = "Top"
+    var itemInfo: IndicatorInfo = "TestView"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstTableView.delegate = self
-        firstTableView.dataSource = self
+      
+        first2TableView.delegate = self
+        first2TableView.dataSource = self
         
-        firstTableView.rowHeight = UITableView.automaticDimension   // automaticDimension・自動寸法
-        firstTableView.estimatedRowHeight = UITableView.automaticDimension // estimatedRowHeight・推定行高
         
-    
+        first2TableView.rowHeight = UITableView.automaticDimension   // automaticDimension・自動寸法
+        first2TableView.estimatedRowHeight = UITableView.automaticDimension // estimatedRowHeight・推定行高
+        
         readArticlesFromFirestore()
-        
-        configureTableViewCell()
-    }
 
+        configureTableViewCell()
         
+    }
+    
     //XLPagerTabStripに必須
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Top")
+        return IndicatorInfo(title: "TestView")
     }
     
     
@@ -51,19 +51,9 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         print("viewWillAppearが呼ばれた")
         
         dump(articles)
-        dump(postDatas)
+        //dump(postDatas)
     }
     
-    
-    @IBAction func tapWritingButton(_ sender: Any) {
-        let nextvc = storyboard?.instantiateViewController(identifier: "LoginView") as! LoginViewController
-        navigationController?.pushViewController(nextvc, animated: true)
-        
-        print("------ self.navigationController ------")
-        print(self.navigationController)// navigetionControllerの中の初期値
-        print("------ self.navigationController ------")
-    }
-
     
     // TableViewCellを読み込む関数
     func configureTableViewCell() {
@@ -72,49 +62,42 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         // Xibに設定したidentifier
         let cellID = "CustomCell"
         // TableViewCellにcellのIdentifierを指定して登録
-        firstTableView.register(nib, forCellReuseIdentifier: cellID)
+        first2TableView.register(nib, forCellReuseIdentifier: cellID)
     }
+
     
-    //tableViewのrowの数を返す
+    // tableViewのrowの数を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return 1
         return articles.count
     }
-    
-    
-    //tableViewのCellに表示する内容を返す(indexPathの個数だけ呼ばれる)
+ 
+
+    // tableViewのCellに表示する内容を返すメソッド(indexPathの個数だけ呼ばれるメソッド)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(indexPath)
+        // Cellを呼び出すメソッド(ここは覚えてしまおう)
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! TableViewCell
         
+       
         if articles.isEmpty == false {
             cell.titleLabel?.text = articles[indexPath.row].title
-            //cell.articleLabel?.text = articles[indexPath.row].text
-            // Nukeで画像を表示させる
-            //print(articles[indexPath.row].imageURL)
-            //_ = Nuke.loadImage(with: getDownloadUrlStr, into: self.writingImageView)
-          
-
+        //cell.cellImageView.image = UIImage(named: infoLists[indexPath.row].imageViewName)
+        // titleの設定
+        //cell.titleLabel.text = infoLists[indexPath.row].title
+        //cell.titleLabel.text = "ああああああああああああああああああああああああああああああああああああああああああああああああああ"
+        //cell.titleLabel.text = articles[indexPath.row].title
+        cell.titleLabel.numberOfLines = 0
+        // descriptionの設定
+        //cell.articleLabel.text = infoLists[indexPath.row].description
         }
         return cell
     }
     
-    // tableViewのCellがタップされた時に呼ばれるメソッド
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt:", indexPath)
-        let vc = ArticleViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    
-    // tableViewのCellの高さ
-    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }*/
-    
-    
     // Firestoreからの読み込み
     func readArticlesFromFirestore(){
         //作成日時の降順に並べ替えて取得する
-        db.collection("Articles").order(by: "createdAt", descending: true)/*.whereField("category", isEqualTo: "Work")*/.getDocuments { (querySnapShot, err) in
+        db.collection("Articles").order(by: "createdAt", descending: true)/*whereField("category", isEqualTo: "Work")*/.getDocuments { (querySnapShot, err) in
                 if let err = err{
                 //エラー時
                 print("エラー\(err)")
@@ -137,11 +120,10 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
                        // self.articles.append(Article(articleId: document.documentID, title: title, text: text, createdAt: createdAt, category:category, style: style))
                     }
                     
-                    self.firstTableView.reloadData()
+                    self.first2TableView.reloadData()
                 }
             }
         }
     }
-    
-}
 
+}

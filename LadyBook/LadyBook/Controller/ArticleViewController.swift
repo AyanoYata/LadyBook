@@ -23,9 +23,7 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var articleLabel: UILabel!
-    //@IBOutlet weak var titleTextField: UITextField!
-    //@IBOutlet weak var articleTextView: UITextView!
-    
+   
     
    
    // @IBOutlet weak var selectedCategoryTextField: UITextField!
