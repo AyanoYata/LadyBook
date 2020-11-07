@@ -82,6 +82,7 @@ class FirstView2Controller: UIViewController, IndicatorInfoProvider, UITableView
        
         if articles.isEmpty == false {
             cell.titleLabel?.text = articles[indexPath.row].title
+            cell.articleLabel?.text = articles[indexPath.row].text
         //cell.cellImageView.image = UIImage(named: infoLists[indexPath.row].imageViewName)
         // titleの設定
         //cell.titleLabel.text = infoLists[indexPath.row].title
@@ -93,6 +94,14 @@ class FirstView2Controller: UIViewController, IndicatorInfoProvider, UITableView
         }
         return cell
     }
+    
+    // tableViewのCellがタップされた時に呼ばれるメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt:", indexPath)
+        let vc = ArticleViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
     
     // Firestoreからの読み込み
     func readArticlesFromFirestore(){
@@ -110,12 +119,12 @@ class FirstView2Controller: UIViewController, IndicatorInfoProvider, UITableView
                     let data = document.data()
                     
                     if let title = data["title"] as? String,
-                       //let text = data["text"] as? String,
+                       let text = data["text"] as? String,
                        //let imageURL = data["imageURL"] as? String,
                        //let category = data["category"] as? String,
                       // let style = data["style"] as? String,
                        let createdAt = data["createdAt"] as? Timestamp {
-                        self.articles.append(Article(articleId: document.documentID, title: title, createdAt: createdAt))
+                        self.articles.append(Article(articleId: document.documentID, title: title, text: text, createdAt: createdAt))
                         
                        // self.articles.append(Article(articleId: document.documentID, title: title, text: text, createdAt: createdAt, category:category, style: style))
                     }

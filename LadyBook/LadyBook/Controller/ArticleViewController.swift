@@ -110,7 +110,7 @@ class ArticleViewController: UIViewController, UITabBarDelegate {
         func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
             switch item.tag{
             case 1:
-                let nextVC = storyboard?.instantiateViewController(identifier: "First")
+                let nextVC = storyboard?.instantiateViewController(identifier: "First2")
                 self.present(nextVC!, animated: true, completion: nil)
             
             //case 2:

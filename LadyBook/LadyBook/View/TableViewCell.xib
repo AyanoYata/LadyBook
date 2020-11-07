@@ -10,14 +10,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomCell" customModule="LadyBook" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" id="df7-a7-jzd" customClass="TableViewCell" customModule="LadyBook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CustomCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="df7-a7-jzd" id="eri-E3-Btd">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQN-FF-kNB">
-                        <rect key="frame" x="10" y="10" width="394" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQN-FF-kNB">
+                        <rect key="frame" x="10" y="8.5" width="394" height="20.5"/>
+                        <accessibility key="accessibilityConfiguration" identifier="CustomCell"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ2-tv-emc">
+                        <rect key="frame" x="10" y="59" width="394" height="21"/>
                         <accessibility key="accessibilityConfiguration" identifier="CustomCell"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -25,17 +32,21 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZQN-FF-kNB" secondAttribute="bottom" constant="10" id="42n-tg-DEL"/>
-                    <constraint firstItem="ZQN-FF-kNB" firstAttribute="leading" secondItem="eri-E3-Btd" secondAttribute="leading" constant="10" id="4tD-11-fod"/>
-                    <constraint firstItem="ZQN-FF-kNB" firstAttribute="top" secondItem="eri-E3-Btd" secondAttribute="top" constant="10" id="8cP-P1-yc3"/>
-                    <constraint firstAttribute="trailing" secondItem="ZQN-FF-kNB" secondAttribute="trailing" constant="10" id="nPB-Om-zzj"/>
+                    <constraint firstItem="sQ2-tv-emc" firstAttribute="leading" secondItem="eri-E3-Btd" secondAttribute="leading" constant="10" id="5Zr-OB-Cpd"/>
+                    <constraint firstItem="ZQN-FF-kNB" firstAttribute="top" secondItem="eri-E3-Btd" secondAttribute="top" constant="10" id="ACE-4T-6qI"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sQ2-tv-emc" secondAttribute="bottom" constant="10" id="WIo-d8-BzP"/>
+                    <constraint firstAttribute="trailing" secondItem="sQ2-tv-emc" secondAttribute="trailing" constant="10" id="Yhr-DA-rwf"/>
+                    <constraint firstItem="sQ2-tv-emc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZQN-FF-kNB" secondAttribute="bottom" constant="30" id="aZJ-wI-n8m"/>
+                    <constraint firstItem="ZQN-FF-kNB" firstAttribute="leading" secondItem="eri-E3-Btd" secondAttribute="leading" constant="10" id="lvd-hL-Ery"/>
+                    <constraint firstAttribute="trailing" secondItem="ZQN-FF-kNB" secondAttribute="trailing" constant="10" id="uTl-UF-uyI"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="CustomCell"/>
             <connections>
+                <outlet property="articleLabel" destination="sQ2-tv-emc" id="A0s-od-mte"/>
                 <outlet property="titleLabel" destination="ZQN-FF-kNB" id="SJI-4V-qm8"/>
             </connections>
-            <point key="canvasLocation" x="-997.10144927536237" y="26.785714285714285"/>
+            <point key="canvasLocation" x="-997.10144927536237" y="42.1875"/>
         </tableViewCell>
     </objects>
 </document>
